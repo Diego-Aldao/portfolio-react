@@ -1,7 +1,8 @@
 import { css } from "styled-components";
 
-const variables = css`
+const Variables = css`
   :root {
     --color-principal: #ff848e;
   }
 `;
+export default Variables;
