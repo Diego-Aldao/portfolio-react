@@ -52,6 +52,15 @@ const EstilosGlobales = createGlobalStyle`
      margin: 0;
    }
   }
+
+  ul{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color:inherit;
+  }
 `;
 
 export default EstilosGlobales;
