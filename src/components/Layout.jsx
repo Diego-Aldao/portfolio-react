@@ -2,10 +2,9 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 
 const Contenedor = styled.main`
-  width: 100%;
-  height: 100%;
   padding: 0px 25px;
-  max-width: 720px;
+  max-width: 780px;
+  margin: 0 auto;
   @media (min-width: 992px) {
     max-width: 960px;
   }
