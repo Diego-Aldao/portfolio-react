@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Navbar from "./Navbar";
 
 const Contenedor = styled.main`
   width: 100%;
@@ -17,7 +18,11 @@ const Contenedor = styled.main`
 `;
 
 const Layout = () => {
-  return <Contenedor></Contenedor>;
+  return (
+    <Contenedor>
+      <Navbar />
+    </Contenedor>
+  );
 };
 
 export default Layout;
