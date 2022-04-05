@@ -8,6 +8,7 @@ const EstilosGlobales = createGlobalStyle`
 
   body {
     background: var(--navy);
+    font-family:var(--fuente-sans);
   }
 
   html {
@@ -31,6 +32,10 @@ const EstilosGlobales = createGlobalStyle`
    font-weight: 600;
    color: var(--lightest-slate);
    line-height: 1.1;
+  }
+
+  h1, a {
+    font-family: var(--fuente-mono);
   }
   
   img,
