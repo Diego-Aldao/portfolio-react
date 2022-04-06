@@ -8,22 +8,22 @@ const animacion = keyframes`
 
 const Navegacion = styled.nav`
   width: 100%;
-  max-width: 1520px;
   height: 100px;
   padding: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
-  margin: 0 auto;
   left: 0px;
   top: 0px;
   @media (min-width: 768px) {
     padding: 25px 50px;
   }
-  @media (min-width: 1540px) {
-    left: auto;
-  }
+`;
+const Contenido = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1520px;
+  margin: 0 auto;
+  height: 100%;
 `;
 
 const Logo = styled.span`
@@ -103,41 +103,43 @@ const BotonCurriculum = styled.a`
 const Navbar = () => {
   return (
     <Navegacion>
-      <Logo>D</Logo>
-      <NavLinks>
-        <li>
-          <a href="#">
-            <Numeracion>01.</Numeracion>
-            inicio
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Numeracion>02.</Numeracion>
-            about
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Numeracion>03.</Numeracion>
-            proyectos
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <Numeracion>04.</Numeracion>
-            contacto
-          </a>
-        </li>
-        <li>
-          <BotonCurriculum>curriculum</BotonCurriculum>
-        </li>
-      </NavLinks>
-      <Hamburguesa>
-        <span></span>
-        <SpanAnimado></SpanAnimado>
-        <span></span>
-      </Hamburguesa>
+      <Contenido>
+        <Logo>D</Logo>
+        <NavLinks>
+          <li>
+            <a href="#">
+              <Numeracion>01.</Numeracion>
+              inicio
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Numeracion>02.</Numeracion>
+              about
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Numeracion>03.</Numeracion>
+              proyectos
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Numeracion>04.</Numeracion>
+              contacto
+            </a>
+          </li>
+          <li>
+            <BotonCurriculum>curriculum</BotonCurriculum>
+          </li>
+        </NavLinks>
+        <Hamburguesa>
+          <span></span>
+          <SpanAnimado></SpanAnimado>
+          <span></span>
+        </Hamburguesa>
+      </Contenido>
     </Navegacion>
   );
 };
