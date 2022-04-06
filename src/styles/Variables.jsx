@@ -14,7 +14,7 @@ const Variables = css`
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
 
-    --fuente-mono: "Inconsolata", monospace;
+    --fuente-mono: "SF Mono", monospace;
     --fuente-sans: "Montserrat", sans-serif;
   }
 `;
