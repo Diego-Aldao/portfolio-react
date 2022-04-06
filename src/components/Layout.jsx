@@ -1,18 +1,14 @@
 import styled from "styled-components";
+import Header from "./Header";
 import Navbar from "./Navbar";
 
 const Contenedor = styled.main`
   padding: 0px 25px;
-  max-width: 780px;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1340px;
+  @media (min-width: 768px) {
+    padding: 0px 40px;
   }
 `;
 
@@ -20,6 +16,7 @@ const Layout = () => {
   return (
     <Contenedor>
       <Navbar />
+      <Header />
     </Contenedor>
   );
 };
