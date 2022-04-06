@@ -8,11 +8,22 @@ const animacion = keyframes`
 
 const Navegacion = styled.nav`
   width: 100%;
+  max-width: 1520px;
   height: 100px;
-  padding: 25px 0px;
+  padding: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  margin: 0 auto;
+  left: 0px;
+  top: 0px;
+  @media (min-width: 768px) {
+    padding: 25px 50px;
+  }
+  @media (min-width: 1540px) {
+    left: auto;
+  }
 `;
 
 const Logo = styled.span`
