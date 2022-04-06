@@ -9,6 +9,7 @@ const EstilosGlobales = createGlobalStyle`
   body {
     background: var(--navy);
     font-family:var(--fuente-sans);
+    line-height: 1.3;
   }
 
   html {
@@ -47,6 +48,7 @@ const EstilosGlobales = createGlobalStyle`
   
   p {
    margin: 0 0 15px 0;
+   line-height: 1.5;
    &:last-child,
    &:last-of-type {
      margin: 0;
