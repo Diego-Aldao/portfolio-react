@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 `;
 
