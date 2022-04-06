@@ -1,18 +1,5 @@
 import styled, { css } from "styled-components";
 
-const Contenedor = styled.div`
-  padding: 00px 0px 0px;
-  @media (min-width: 480px) {
-    padding: 0px 25px 0px;
-  }
-  @media (min-width: 768px) {
-    padding: 0px 60px 0px;
-  }
-  @media (min-width: 1080px) {
-    padding: 0px 110px 0px;
-  }
-`;
-
 const MainHeader = styled.section`
   color: var(--color-principal);
   margin: 0 auto;
@@ -88,20 +75,18 @@ const Boton = styled.a`
 
 const Header = () => {
   return (
-    <Contenedor>
-      <MainHeader>
-        <MiniTexto>hola, mi nombre es</MiniTexto>
-        <Titulo>diego aldao.</Titulo>
-        <Titulo subtitulo>construyo sitios para la web.</Titulo>
-        <Descripcion>
-          Im a software engineer specializing in building (and occasionally
-          designing) exceptional digital experiences. Currently, Im focused on
-          building accessible, human-centered products at{" "}
-          <span>mercadolibre</span>
-        </Descripcion>
-        <Boton>contactarme</Boton>
-      </MainHeader>
-    </Contenedor>
+    <MainHeader>
+      <MiniTexto>hola, mi nombre es</MiniTexto>
+      <Titulo>diego aldao.</Titulo>
+      <Titulo subtitulo>construyo sitios para la web.</Titulo>
+      <Descripcion>
+        Im a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences. Currently, Im focused on
+        building accessible, human-centered products at{" "}
+        <span>mercadolibre</span>
+      </Descripcion>
+      <Boton>contactarme</Boton>
+    </MainHeader>
   );
 };
 
