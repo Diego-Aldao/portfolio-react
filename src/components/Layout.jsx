@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import About from "./About";
 import Header from "./Header";
 import Navbar from "./Navbar";
 
@@ -23,6 +24,7 @@ const Layout = () => {
     <Contenedor>
       <Navbar />
       <Header />
+      <About />
     </Contenedor>
   );
 };
