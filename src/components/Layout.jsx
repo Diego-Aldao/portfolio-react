@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import About from "./About";
+import Cursos from "./Cursos";
 import Header from "./Header";
 import Navbar from "./Navbar";
 
@@ -25,6 +26,7 @@ const Layout = () => {
       <Navbar />
       <Header />
       <About />
+      <Cursos />
     </Contenedor>
   );
 };
