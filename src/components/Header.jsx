@@ -19,6 +19,7 @@ const MainHeader = styled.section`
 const MiniTexto = styled.span`
   color: var(--color-principal);
   font-family: var(--fuente-mono);
+  transform: scale(1, 1.1);
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 20px;

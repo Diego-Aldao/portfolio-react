@@ -67,14 +67,19 @@ const NavLinks = styled.ul`
   height: 100%;
   color: var(--lightest-slate);
   font-weight: 600;
+  li:last-child {
+    a {
+      font-family: var(--fuente-mono);
+    }
+  }
   a {
     padding: 10px 15px;
     font-family: var(--fuente-sans);
-
     font-size: 13px;
     text-transform: capitalize;
     letter-spacing: 0.5px;
   }
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: flex-end;
@@ -96,7 +101,7 @@ const BotonCurriculum = styled.a`
   padding: 0.75rem 1rem;
   line-height: 1;
   cursor: pointer;
-  font-weight: 800;
+
   margin-left: 15px;
 `;
 
