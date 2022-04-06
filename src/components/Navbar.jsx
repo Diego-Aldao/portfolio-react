@@ -13,6 +13,8 @@ const Navegacion = styled.nav`
   position: fixed;
   left: 0px;
   top: 0px;
+  background: var(--navy);
+  z-index: 9;
   @media (min-width: 768px) {
     padding: 25px 50px;
   }
