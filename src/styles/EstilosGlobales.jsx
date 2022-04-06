@@ -10,6 +10,7 @@ const EstilosGlobales = createGlobalStyle`
     background: var(--navy);
     font-family:var(--fuente-sans);
     line-height: 1.3;
+    color: var(--slate);
   }
 
   html {
@@ -49,6 +50,8 @@ const EstilosGlobales = createGlobalStyle`
   p {
    margin: 0 0 15px 0;
    line-height: 1.5;
+   font-size: clamp(16px, 2vw, 18px);
+
    &:last-child,
    &:last-of-type {
      margin: 0;
