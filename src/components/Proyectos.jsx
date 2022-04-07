@@ -111,21 +111,43 @@ const LinksProyecto = styled.div`
   }
 `;
 const ImgProyecto = styled.div`
-  background: var(--white);
   grid-column: 1 / -1;
   height: 100%;
   max-height: 340px;
   position: relative;
   z-index: 1;
   grid-row: 1 / -1;
-  opacity: 0.25;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(100%) contrast(1) brightness(70%);
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: var(--navy);
+    opacity: 0.8;
+  }
+  &:hover {
+    img {
+      filter: brightness(100%);
+    }
+    &:after {
+      background: none;
+    }
   }
   @media (min-width: 768px) {
     grid-column: ${(props) => (props.imgend ? "6 / 13" : "1 / 8")};
+    &:after {
+      background: var(--color-principal);
+      mix-blend-mode: multiply;
+    }
   }
 `;
 
