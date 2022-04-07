@@ -89,7 +89,9 @@ const Detalle = styled.div`
     text-transform: capitalize;
     color: var(--light-slate);
     font-size: 14px;
-    margin-bottom: 25px;
+  }
+  ul {
+    margin-top: 25px;
   }
   li {
     position: relative;
