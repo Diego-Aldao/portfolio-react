@@ -3,6 +3,7 @@ import About from "./About";
 import Cursos from "./Cursos";
 import Header from "./Header";
 import Navbar from "./Navbar";
+import Proyectos from "./Proyectos";
 
 const Contenedor = styled.main`
   padding: 0px 25px;
@@ -27,6 +28,7 @@ const Layout = () => {
       <Header />
       <About />
       <Cursos />
+      <Proyectos />
     </Contenedor>
   );
 };
