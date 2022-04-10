@@ -27,6 +27,21 @@ const ListaArchivo = styled.div`
   gap: 15px;
 `;
 
+const Boton = styled.button`
+  color: var(--color-principal);
+  border: 1px solid var(--color-principal);
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: var(--fuente-mono);
+  line-height: 1;
+  cursor: pointer;
+  padding: 1.25rem 1.75rem;
+  margin: 80px auto 0px;
+  display: block;
+  background: #0000;
+  text-transform: capitalize;
+`;
+
 const Archivo = () => {
   return (
     <Contenedor>
@@ -40,6 +55,7 @@ const Archivo = () => {
         <ItemArchivo />
         <ItemArchivo />
       </ListaArchivo>
+      <Boton>ver mas</Boton>
     </Contenedor>
   );
 };
