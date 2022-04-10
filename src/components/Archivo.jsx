@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ItemArchivo from "./ItemArchivo";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -23,6 +24,7 @@ const Header = styled.header`
 const ListaArchivo = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
 `;
 
 const Archivo = () => {
@@ -32,7 +34,12 @@ const Archivo = () => {
         <h2>lista de proyectos</h2>
         <span>ver todos</span>
       </Header>
-      <ListaArchivo></ListaArchivo>
+      <ListaArchivo>
+        <ItemArchivo />
+        <ItemArchivo />
+        <ItemArchivo />
+        <ItemArchivo />
+      </ListaArchivo>
     </Contenedor>
   );
 };
