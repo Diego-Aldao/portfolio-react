@@ -1,11 +1,11 @@
-import Layout from "./components/Layout";
+import PaginaIndex from "./pages";
 import EstilosGlobales from "./styles/EstilosGlobales";
 
 function App() {
   return (
     <>
       <EstilosGlobales />
-      <Layout />
+      <PaginaIndex />
     </>
   );
 }
