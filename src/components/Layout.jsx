@@ -24,16 +24,11 @@ const Contenedor = styled.main`
   }
 `;
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <Contenedor>
       <Navbar />
-      <Header />
-      <About />
-      <Cursos />
-      <Proyectos />
-      <Archivo />
-      <Contacto />
+      {children}
       <Footer />
     </Contenedor>
   );
