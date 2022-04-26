@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ItemArchivo from "./ItemArchivo";
+import { Link } from "react-router-dom";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -47,7 +48,7 @@ const Archivo = () => {
     <Contenedor>
       <Header>
         <h2>lista de proyectos</h2>
-        <span>ver todos</span>
+        <Link to="/archivo">ver mas</Link>
       </Header>
       <ListaArchivo>
         <ItemArchivo />
