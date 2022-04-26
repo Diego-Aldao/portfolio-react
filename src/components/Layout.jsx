@@ -1,12 +1,6 @@
 import styled from "styled-components";
-import About from "./About";
-import Archivo from "./Archivo";
-import Contacto from "./Contacto";
-import Cursos from "./Cursos";
 import Footer from "./Footer";
-import Header from "./Header";
 import Navbar from "./Navbar";
-import Proyectos from "./Proyectos";
 
 const Contenedor = styled.main`
   padding: 0px 25px;
