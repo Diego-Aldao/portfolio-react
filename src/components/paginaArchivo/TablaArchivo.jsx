@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "@iconify/react";
 
 const Tabla = styled.table`
   width: 100%;
@@ -46,6 +47,15 @@ const Titulo = styled.td`
   font-weight: 600;
 `;
 
+const Icono = styled(Icon)`
+  height: 22px;
+  width: 22px;
+  margin-right: 5px;
+  &:hover {
+    color: var(--color-principal);
+  }
+`;
+
 const TablaArchivo = () => {
   return (
     <Tabla>
@@ -73,7 +83,10 @@ const TablaArchivo = () => {
             </span>
             <span>react-router</span>
           </ListaTech>
-          <td>C</td>
+          <td>
+            <Icono icon="mi:external-link" inline={true} />
+            <Icono icon="codicon:github-alt" inline={true} />
+          </td>
         </tr>
         <tr>
           <Año>2021</Año>
@@ -90,7 +103,10 @@ const TablaArchivo = () => {
             </span>
             <span>react-router</span>
           </ListaTech>
-          <td>C</td>
+          <td>
+            <Icono icon="mi:external-link" inline={true} />
+            <Icono icon="codicon:github-alt" inline={true} />
+          </td>
         </tr>
         <tr>
           <Año>2022</Año>
@@ -107,7 +123,10 @@ const TablaArchivo = () => {
             </span>
             <span>react-router</span>
           </ListaTech>
-          <td>C</td>
+          <td>
+            <Icono icon="mi:external-link" inline={true} />
+            <Icono icon="codicon:github-alt" inline={true} />
+          </td>
         </tr>
         <tr>
           <Año>2022</Año>
@@ -124,7 +143,10 @@ const TablaArchivo = () => {
             </span>
             <span>react-router</span>
           </ListaTech>
-          <td>C</td>
+          <td>
+            <Icono icon="mi:external-link" inline={true} />
+            <Icono icon="codicon:github-alt" inline={true} />
+          </td>
         </tr>
         <tr>
           <Año>2022</Año>
@@ -141,7 +163,10 @@ const TablaArchivo = () => {
             </span>
             <span>react-router</span>
           </ListaTech>
-          <td>C</td>
+          <td>
+            <Icono icon="mi:external-link" inline={true} />
+            <Icono icon="codicon:github-alt" inline={true} />
+          </td>
         </tr>
       </tbody>
     </Tabla>
