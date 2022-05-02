@@ -85,7 +85,7 @@ const TablaArchivo = () => {
           </ListaTech>
           <td>
             <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="codicon:github-alt" inline={true} />
+            <Icono icon="charm:github" inline={true} />
           </td>
         </tr>
         <tr>
@@ -105,7 +105,7 @@ const TablaArchivo = () => {
           </ListaTech>
           <td>
             <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="codicon:github-alt" inline={true} />
+            <Icono icon="charm:github" inline={true} />
           </td>
         </tr>
         <tr>
@@ -125,7 +125,7 @@ const TablaArchivo = () => {
           </ListaTech>
           <td>
             <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="codicon:github-alt" inline={true} />
+            <Icono icon="charm:github" inline={true} />
           </td>
         </tr>
         <tr>
@@ -145,7 +145,7 @@ const TablaArchivo = () => {
           </ListaTech>
           <td>
             <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="codicon:github-alt" inline={true} />
+            <Icono icon="charm:github" inline={true} />
           </td>
         </tr>
         <tr>
@@ -165,7 +165,7 @@ const TablaArchivo = () => {
           </ListaTech>
           <td>
             <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="codicon:github-alt" inline={true} />
+            <Icono icon="charm:github" inline={true} />
           </td>
         </tr>
       </tbody>
