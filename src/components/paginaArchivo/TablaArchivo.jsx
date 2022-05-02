@@ -12,14 +12,14 @@ const Tabla = styled.table`
     text-transform: capitalize;
   }
   th {
-    font-size: 14px;
+    font-size: clamp(14px, 2vw, 18px);
   }
 `;
 
 const Tech = styled.th`
   display: none;
   @media (min-width: 768px) {
-    display: inline-block;
+    display: block;
   }
 `;
 
@@ -40,7 +40,7 @@ const Separador = styled.span`
 const Año = styled.td`
   color: var(--color-principal);
   font-family: var(--fuente-mono);
-  font-size: 14px;
+  font-size: clamp(14px, 2vw, 18px);
 `;
 const Titulo = styled.td`
   color: var(--lightest-slate);
