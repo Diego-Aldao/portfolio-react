@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import imgPrueba from "../images/img-prueba.jpg";
+import { Icon } from "@iconify/react";
 
 const Item = styled.li`
   display: grid;
@@ -153,8 +154,12 @@ const Proyecto = ({ textend, imgend }) => {
           <li>javas</li>
         </ul>
         <LinksProyecto>
-          <a href="">L</a>
-          <a href="">D</a>
+          <a href="">
+            <Icon icon="mi:external-link" inline={true} />
+          </a>
+          <a href="">
+            <Icon icon="charm:github" inline={true} />
+          </a>
         </LinksProyecto>
       </ContenidoProyecto>
     </Item>

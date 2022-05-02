@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Icon } from "@iconify/react";
 
 const Contenido = styled.footer`
   width: 100%;
@@ -29,13 +30,19 @@ const Footer = () => {
     <Contenido>
       <Links>
         <li>
-          <a href="">a</a>
+          <a href="">
+            <Icon icon="fluent:mail-16-regular" inline={true} />
+          </a>
         </li>
         <li>
-          <a href="">a</a>
+          <a href="">
+            <Icon icon="charm:github" inline={true} />
+          </a>
         </li>
         <li>
-          <a href="">a</a>
+          <a href="">
+            <Icon icon="akar-icons:linkedin-fill" inline={true} />
+          </a>
         </li>
       </Links>
       <Nombre>

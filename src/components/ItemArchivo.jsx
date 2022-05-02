@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Icon } from "@iconify/react";
 
 const Item = styled.div`
   display: flex;
@@ -52,8 +53,13 @@ const ItemArchivo = () => {
   return (
     <Item>
       <ItemHead>
-        <div>a</div>
-        <div>l</div>
+        <div>
+          <Icon icon="akar-icons:folder" inline={true} />
+        </div>
+        <div>
+          <Icon icon="mi:external-link" inline={true} />
+          <Icon icon="charm:github" inline={true} />
+        </div>
       </ItemHead>
       <ItemTitulo>
         Lorem, ipsum dolor sit amet consectetur adipisicing.
