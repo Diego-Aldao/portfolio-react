@@ -14,6 +14,9 @@ const Tabla = styled.table`
   th {
     font-size: clamp(14px, 2vw, 18px);
   }
+  tr:hover {
+    background: var(--light-navy);
+  }
 `;
 
 const Tech = styled.th`
