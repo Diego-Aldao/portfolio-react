@@ -7,11 +7,20 @@ const Item = styled.li`
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 30px;
   align-items: center;
+  transition: var(--transition);
   @media (min-width: 480px) {
     margin-bottom: 70px;
   }
   @media (min-width: 768px) {
     margin-bottom: 100px;
+  }
+  &:hover {
+    img {
+      filter: brightness(100%);
+    }
+    div:after {
+      background: none;
+    }
   }
 `;
 
@@ -96,7 +105,6 @@ const ImgProyecto = styled.div`
   position: relative;
   z-index: 1;
   grid-row: 1 / -1;
-
   img {
     width: 100%;
     height: 100%;
@@ -112,6 +120,7 @@ const ImgProyecto = styled.div`
     left: 0px;
     background: var(--navy);
     opacity: 0.8;
+    transition: var(--transition);
   }
   &:hover {
     img {
