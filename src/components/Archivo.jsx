@@ -43,12 +43,16 @@ const Boton = styled.button`
   text-transform: capitalize;
 `;
 
+const VerMas = styled(Link)`
+  color: var(--color-principal);
+`;
+
 const Archivo = () => {
   return (
     <Contenedor>
       <Header>
         <h2>lista de proyectos</h2>
-        <Link to="/archivo">ver mas</Link>
+        <VerMas to="/archivo">ver el archivo</VerMas>
       </Header>
       <ListaArchivo>
         <ItemArchivo />
