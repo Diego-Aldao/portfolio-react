@@ -53,9 +53,10 @@ const Descripcion = styled.p`
   font-size: clamp(16px, 2vw, 18px);
   max-width: 540px;
   margin: 0px;
-  span {
+  a {
     text-transform: capitalize;
     color: var(--color-principal);
+    font-family: var(--fuente-sans);
   }
 `;
 
@@ -72,6 +73,10 @@ const Boton = styled.a`
   display: inline-block;
   width: 140px;
   text-transform: capitalize;
+  &:hover {
+    color: var(--navy);
+    background: var(--color-principal);
+  }
 `;
 
 const Header = () => {
@@ -84,7 +89,7 @@ const Header = () => {
         Im a software engineer specializing in building (and occasionally
         designing) exceptional digital experiences. Currently, Im focused on
         building accessible, human-centered products at{" "}
-        <span>mercadolibre</span>
+        <a href="#">MercadoLibre</a>
       </Descripcion>
       <Boton>contactarme</Boton>
     </MainHeader>
