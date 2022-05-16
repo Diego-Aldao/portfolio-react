@@ -64,7 +64,11 @@ const EstilosGlobales = createGlobalStyle`
 
   a{
     text-decoration: none;
-    color:inherit;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    transition: var(--transition);
   }
 `;
 
