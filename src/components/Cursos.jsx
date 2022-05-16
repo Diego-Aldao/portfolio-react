@@ -51,6 +51,7 @@ const Boton = styled.button`
   border-bottom: 2px solid var(--lightest-navy);
   height: 42px;
   background: none;
+  transition: var(--transition);
   &::selection {
     color: var(--color-principal);
   }
@@ -61,12 +62,13 @@ const Boton = styled.button`
     font-family: var(--fuente-mono);
     font-size: 14px;
     font-weight: 600;
+    transition: var(--transition);
   }
   &:hover {
+    border-color: var(--color-principal);
     span {
       color: var(--color-principal);
     }
-    border-color: var(--color-principal);
   }
   @media (min-width: 600px) {
     border-bottom: none;
