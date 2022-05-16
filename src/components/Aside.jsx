@@ -32,11 +32,18 @@ const ListaSocial = styled.ul`
   padding: 0px;
   list-style: none;
   li {
-    padding: 10px;
     font-size: 25px;
+  }
+  a {
+    padding: 10px;
   }
   li:last-of-type {
     margin-bottom: 20px;
+  }
+  a:hover {
+    color: var(--color-principal);
+    padding-top: 5px;
+    padding-bottom: 15px;
   }
 `;
 const Email = styled.div`
@@ -55,6 +62,11 @@ const Email = styled.div`
     letter-spacing: 0.1em;
     writing-mode: vertical-rl;
     font-size: 14px;
+  }
+  a:hover {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    color: var(--color-principal);
   }
   &:after {
     content: "";
@@ -75,13 +87,19 @@ const Aside = () => {
       <Social>
         <ListaSocial>
           <li>
-            <Icon icon="charm:github" inline={true} />
+            <a href="#">
+              <Icon icon="charm:github" inline={true} />
+            </a>
           </li>
           <li>
-            <Icon icon="akar-icons:instagram-fill" inline={true} />
+            <a href="#">
+              <Icon icon="akar-icons:instagram-fill" inline={true} />
+            </a>
           </li>
           <li>
-            <Icon icon="lucide:linkedin" inline={true} />
+            <a href="#">
+              <Icon icon="lucide:linkedin" inline={true} />
+            </a>
           </li>
         </ListaSocial>
       </Social>
