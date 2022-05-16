@@ -69,17 +69,24 @@ const NavLinks = styled.ul`
   height: 100%;
   color: var(--lightest-slate);
   font-weight: 600;
-  li:last-child {
-    a {
-      font-family: var(--fuente-mono);
-    }
-  }
   a {
     padding: 10px 15px;
     font-family: var(--fuente-sans);
     font-size: 13px;
     text-transform: capitalize;
     letter-spacing: 0.5px;
+  }
+  a:hover {
+    color: var(--color-principal);
+  }
+  li:last-child {
+    a {
+      font-family: var(--fuente-mono);
+    }
+    a:hover {
+      color: var(--navy);
+      background: var(--color-principal);
+    }
   }
 
   @media (min-width: 768px) {
@@ -103,7 +110,6 @@ const BotonCurriculum = styled.a`
   padding: 0.75rem 1rem;
   line-height: 1;
   cursor: pointer;
-
   margin-left: 15px;
 `;
 
