@@ -10,6 +10,12 @@ const Item = styled.div`
   height: 100%;
   padding: 2rem 1.75rem;
   background-color: var(--light-navy);
+  transition: var(--transition);
+  &:hover {
+    h3 {
+      color: var(--color-principal);
+    }
+  }
 `;
 
 const ItemHead = styled.div`
@@ -19,14 +25,21 @@ const ItemHead = styled.div`
   height: 40px;
   margin-bottom: 35px;
   div {
-    width: 40px;
-    height: 100%;
+    display: flex;
+    svg {
+      height: 22px;
+      margin-right: 15px;
+    }
+    svg:last-of-type {
+      margin: 0px;
+    }
   }
 `;
 const ItemTitulo = styled.h3`
   color: var(--lightest-slate);
   font-size: 20px;
   line-height: 1.3;
+  transition: var(--transition);
 `;
 
 const ItemDescripcion = styled.p`
@@ -49,16 +62,20 @@ const ItemTecno = styled.ul`
   }
 `;
 
+const Carpeta = styled(Icon)`
+  color: var(--color-principal);
+  height: 40px;
+  width: 40px;
+`;
+
 const ItemArchivo = () => {
   return (
     <Item>
       <ItemHead>
+        <Carpeta icon="carbon:folder" inline={true} />
         <div>
-          <Icon icon="akar-icons:folder" inline={true} />
-        </div>
-        <div>
-          <Icon icon="mi:external-link" inline={true} />
           <Icon icon="charm:github" inline={true} />
+          <Icon icon="mi:external-link" inline={true} />
         </div>
       </ItemHead>
       <ItemTitulo>
