@@ -1,14 +1,22 @@
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
+import { animated } from "react-spring";
 
-const Item = styled.div`
+const Item = animated(styled.div`
+  padding: 2rem 1.75rem;
+  background-color: var(--light-navy);
+  font-family: var(--fuente-sans);
+  max-height: 325px;
+  position: relative;
+`);
+
+const ContenidoItem = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
   height: 100%;
-  padding: 2rem 1.75rem;
   background-color: var(--light-navy);
   transition: var(--transition);
   &:hover {
@@ -29,6 +37,10 @@ const ItemHead = styled.div`
     svg {
       height: 22px;
       margin-right: 15px;
+      transition: var(--transition);
+    }
+    svg:hover {
+      color: var(--color-principal);
     }
     svg:last-of-type {
       margin: 0px;
@@ -68,28 +80,25 @@ const Carpeta = styled(Icon)`
   width: 40px;
 `;
 
-const ItemArchivo = () => {
+const ItemArchivo = ({ data, style }) => {
   return (
-    <Item>
-      <ItemHead>
-        <Carpeta icon="carbon:folder" inline={true} />
-        <div>
-          <Icon icon="charm:github" inline={true} />
-          <Icon icon="mi:external-link" inline={true} />
-        </div>
-      </ItemHead>
-      <ItemTitulo>
-        Lorem, ipsum dolor sit amet consectetur adipisicing.
-      </ItemTitulo>
-      <ItemDescripcion>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-        perspiciatis nostrum soluta.
-      </ItemDescripcion>
-      <ItemTecno>
-        <li>javascript</li>
-        <li>sql</li>
-        <li>react</li>
-      </ItemTecno>
+    <Item style={data.id > 3 ? style : null}>
+      <ContenidoItem>
+        <ItemHead>
+          <Carpeta icon="carbon:folder" inline={true} />
+          <div>
+            <Icon icon="charm:github" inline={true} />
+            <Icon icon="mi:external-link" inline={true} />
+          </div>
+        </ItemHead>
+        <ItemTitulo>{data.titulo}</ItemTitulo>
+        <ItemDescripcion>{data.descripcion}</ItemDescripcion>
+        <ItemTecno>
+          {data.tecnologias.map((tecnologia) => {
+            return <li>{tecnologia}</li>;
+          })}
+        </ItemTecno>
+      </ContenidoItem>
     </Item>
   );
 };

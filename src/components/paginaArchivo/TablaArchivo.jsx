@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import archivo from "../../data/proyectos.json";
 
 const Tabla = styled.table`
   width: 100%;
@@ -60,6 +62,7 @@ const Icono = styled(Icon)`
 `;
 
 const TablaArchivo = () => {
+  const [listaArchivo, setListaArchivo] = useState(archivo.data);
   return (
     <Tabla>
       <thead>
@@ -71,106 +74,28 @@ const TablaArchivo = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <Año>2020</Año>
-          <Titulo>portfolio</Titulo>
-          <ListaTech>
-            <span>
-              react <Separador>·</Separador>
-            </span>
-            <span>
-              styled-components <Separador>·</Separador>
-            </span>
-            <span>
-              gatsby <Separador>·</Separador>
-            </span>
-            <span>react-router</span>
-          </ListaTech>
-          <td>
-            <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="charm:github" inline={true} />
-          </td>
-        </tr>
-        <tr>
-          <Año>2021</Año>
-          <Titulo>app clima</Titulo>
-          <ListaTech>
-            <span>
-              react <Separador>·</Separador>
-            </span>
-            <span>
-              styled-components <Separador>·</Separador>
-            </span>
-            <span>
-              gatsby <Separador>·</Separador>
-            </span>
-            <span>react-router</span>
-          </ListaTech>
-          <td>
-            <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="charm:github" inline={true} />
-          </td>
-        </tr>
-        <tr>
-          <Año>2022</Año>
-          <Titulo>sitio para escuela de nivel inicial</Titulo>
-          <ListaTech>
-            <span>
-              react <Separador>·</Separador>
-            </span>
-            <span>
-              styled-components <Separador>·</Separador>
-            </span>
-            <span>
-              gatsby <Separador>·</Separador>
-            </span>
-            <span>react-router</span>
-          </ListaTech>
-          <td>
-            <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="charm:github" inline={true} />
-          </td>
-        </tr>
-        <tr>
-          <Año>2022</Año>
-          <Titulo>sitio de fotografia</Titulo>
-          <ListaTech>
-            <span>
-              react <Separador>·</Separador>
-            </span>
-            <span>
-              styled-components <Separador>·</Separador>
-            </span>
-            <span>
-              gatsby <Separador>·</Separador>
-            </span>
-            <span>react-router</span>
-          </ListaTech>
-          <td>
-            <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="charm:github" inline={true} />
-          </td>
-        </tr>
-        <tr>
-          <Año>2022</Año>
-          <Titulo>echo design</Titulo>
-          <ListaTech>
-            <span>
-              react <Separador>·</Separador>
-            </span>
-            <span>
-              styled-components <Separador>·</Separador>
-            </span>
-            <span>
-              gatsby <Separador>·</Separador>
-            </span>
-            <span>react-router</span>
-          </ListaTech>
-          <td>
-            <Icono icon="mi:external-link" inline={true} />
-            <Icono icon="charm:github" inline={true} />
-          </td>
-        </tr>
+        {listaArchivo.map((item) => {
+          return (
+            <tr>
+              <Año>{item.año}</Año>
+              <Titulo>{item.titulo}</Titulo>
+              <ListaTech>
+                {item.tecnologias.map((tecnologia) => {
+                  return (
+                    <span>
+                      <Separador>·</Separador>
+                      {tecnologia}
+                    </span>
+                  );
+                })}
+              </ListaTech>
+              <td>
+                <Icono icon="mi:external-link" inline={true} />
+                <Icono icon="charm:github" inline={true} />
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </Tabla>
   );

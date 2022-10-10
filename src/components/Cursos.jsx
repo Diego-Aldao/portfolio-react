@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import cursos from "../data/cursos.json";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -64,8 +66,13 @@ const Boton = styled.button`
     font-weight: 600;
     transition: var(--transition);
   }
-  &:hover {
+  &.seleccionado {
     border-color: var(--color-principal);
+    span {
+      color: var(--color-principal);
+    }
+  }
+  &:hover {
     span {
       color: var(--color-principal);
     }
@@ -118,6 +125,18 @@ const Detalle = styled.div`
 `;
 
 const Cursos = () => {
+  const [listaCursos, setListaCursos] = useState(cursos);
+  const [currentCurso, setCurrentCurso] = useState({});
+
+  useEffect(() => {
+    const primerCurso = listaCursos.cursos.filter((curso) => curso.id === 1)[0];
+    setCurrentCurso(primerCurso);
+  }, []);
+
+  const handleClick = (curso) => {
+    setCurrentCurso(curso);
+  };
+
   return (
     <Contenedor>
       <HeaderNumerado>
@@ -127,40 +146,32 @@ const Cursos = () => {
       </HeaderNumerado>
       <Contenido>
         <Lista>
-          <Boton>
-            <span>curso 01</span>
-          </Boton>
-          <Boton>
-            <span>curso 02</span>
-          </Boton>
-          <Boton>
-            <span>curso 03</span>
-          </Boton>
-          <Boton>
-            <span>curso 04</span>
-          </Boton>
-          <Boton>
-            <span>curso 05</span>
-          </Boton>
+          {listaCursos.cursos.map((curso) => {
+            return (
+              <Boton
+                key={curso.id}
+                onClick={() => handleClick(curso)}
+                className={currentCurso.id === curso.id ? "seleccionado" : ""}
+              >
+                <span>{`curso 0${curso.id}`}</span>
+              </Boton>
+            );
+          })}
         </Lista>
         <Detalle>
-          <h3>desarrollo fullstack</h3>
-          <h4>iters</h4>
-          <p>ago 2021 - ene 2022</p>
-          <ul>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea
-              voluptatibus explicabo tempora repellendus quisquam.
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea
-              voluptatibus explicabo tempora repellendus quisquam.
-            </li>
-            <li>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea
-              voluptatibus explicabo tempora repellendus quisquam.
-            </li>
-          </ul>
+          {currentCurso.id ? (
+            <>
+              <h3>{currentCurso.titulo}</h3>
+              <h4>{currentCurso.institucion}</h4>
+              <p>{`${currentCurso.fechaInicio} - ${currentCurso.fechaFin}`}</p>
+              <ul>
+                <li>{currentCurso.descripcion}.</li>
+                <li>{currentCurso.tecnologias}</li>
+              </ul>
+            </>
+          ) : (
+            <p>loading</p>
+          )}
         </Detalle>
       </Contenido>
     </Contenedor>

@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import ItemArchivo from "./ItemArchivo";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import archivo from "../data/proyectos.json";
+import { useSpring, useTrail, animated } from "react-spring";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -22,11 +25,12 @@ const Header = styled.header`
   }
 `;
 
-const ListaArchivo = styled.div`
+const ListaArchivo = animated(styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
-`;
+  overflow: hidden;
+`);
 
 const Boton = styled.button`
   color: var(--color-principal);
@@ -48,19 +52,52 @@ const VerMas = styled(Link)`
 `;
 
 const Archivo = () => {
+  const [listaArchivo, setListaArchivo] = useState(archivo.data);
+  const [maxLista, setMaxLista] = useState(3);
+  const [toggle, setToggle] = useState(false);
+  const [style, animate] = useSpring(() => ({ height: "325px" }), []);
+
+  //Estilos de Trail de react spring
+  const trail = useTrail(maxLista, {
+    config: { mass: 5, tension: 4000, friction: 200 },
+    opacity: toggle ? 1 : 0,
+    left: toggle ? 0 : 50,
+    top: toggle ? 0 : 50,
+    from: { opacity: 0, left: 50, top: 50 },
+  });
+
+  useEffect(() => {
+    animate({
+      height: toggle ? "650px" : "325px",
+    });
+  }, [maxLista]);
+
+  //Guardar maxLista de items en el state de lista archivo
+  useEffect(() => {
+    const listaFormateada = archivo.data.slice(0, maxLista);
+    setListaArchivo(listaFormateada);
+  }, [maxLista]);
+
+  const handleClick = () => {
+    toggle ? setMaxLista(3) : setMaxLista(6);
+    setToggle(!toggle);
+  };
+
   return (
     <Contenedor>
       <Header>
         <h2>lista de proyectos</h2>
         <VerMas to="/archivo">ver el archivo</VerMas>
       </Header>
-      <ListaArchivo>
-        <ItemArchivo />
-        <ItemArchivo />
-        <ItemArchivo />
-        <ItemArchivo />
+
+      <ListaArchivo style={style}>
+        {listaArchivo.map((item) => {
+          return (
+            <ItemArchivo key={item.id} style={trail[item.id - 1]} data={item} />
+          );
+        })}
       </ListaArchivo>
-      <Boton>ver mas</Boton>
+      <Boton onClick={handleClick}>{toggle ? "ver menos" : "ver mas"}</Boton>
     </Contenedor>
   );
 };
