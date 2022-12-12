@@ -4,20 +4,22 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import archivo from "../data/proyectos.json";
 import { useSpring, useTrail, animated } from "react-spring";
+import listado from "../images/iconos/lista-proyectos.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
   max-width: 1000px;
   margin: 0 auto;
 `;
+
 const Header = styled.header`
   margin-bottom: 40px;
   text-align: center;
   span {
-    font-family: var(--fuente-mono);
-    font-weight: 100;
-    color: var(--color-principal);
-    font-size: 14px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
   h2 {
     font-size: clamp(18px, 3vw, 26px);
@@ -45,10 +47,16 @@ const Boton = styled.button`
   display: block;
   background: #0000;
   text-transform: capitalize;
+  transition: var(--transition);
+  &:hover {
+    color: var(--color-bg-secundario);
+    background: var(--color-principal);
+  }
 `;
 
 const VerMas = styled(Link)`
   color: var(--color-principal);
+  font-size: 16px;
 `;
 
 const Archivo = () => {
@@ -70,10 +78,8 @@ const Archivo = () => {
     animate({
       height: toggle ? "650px" : "325px",
     });
-  }, [maxLista]);
 
-  //Guardar maxLista de items en el state de lista archivo
-  useEffect(() => {
+    //Guardar maxLista de items en el state de lista archivo
     const listaFormateada = archivo.data.slice(0, maxLista);
     setListaArchivo(listaFormateada);
   }, [maxLista]);
@@ -86,8 +92,12 @@ const Archivo = () => {
   return (
     <Contenedor>
       <Header>
-        <h2>lista de proyectos</h2>
-        <VerMas to="/archivo">ver el archivo</VerMas>
+        <h2>
+          <span>
+            <img src={listado} alt="" />
+          </span>
+          lista de proyectos <VerMas to="/archivo">- ver el archivo -</VerMas>
+        </h2>
       </Header>
 
       <ListaArchivo style={style}>
