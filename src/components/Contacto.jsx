@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import contacto from "../images/iconos/contacto.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -7,15 +8,15 @@ const Contenedor = styled.section`
   text-align: center;
 `;
 
-const HeaderNumerado = styled.header`
+const Header = styled.header`
   margin-bottom: 40px;
   text-align: center;
   span {
-    font-family: var(--fuente-mono);
     margin-right: 5px;
-    font-weight: 100;
     color: var(--color-principal);
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
   h2 {
     font-size: clamp(20px, 4vw, 26px);
@@ -26,7 +27,7 @@ const HeaderNumerado = styled.header`
 const Titulo = styled.h2`
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 600;
-  color: var(--lightest-slate);
+  color: var(--color-fuente-principal);
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 20px;
@@ -44,16 +45,24 @@ const Boton = styled.button`
   display: block;
   background: #0000;
   text-transform: capitalize;
+  transition: var(--transition);
+  &:hover {
+    color: var(--color-bg-secundario);
+    background: var(--color-principal);
+  }
 `;
 
 const Contacto = () => {
   return (
     <Contenedor>
-      <HeaderNumerado>
+      <Header>
         <h2>
-          <span>04.</span>contacto
+          <span>
+            <img src={contacto} alt="" />
+          </span>
+          contacto
         </h2>
-      </HeaderNumerado>
+      </Header>
       <Titulo>trabajemos juntos</Titulo>
       <p>
         Although I’m not currently looking for any new opportunities, my inbox
