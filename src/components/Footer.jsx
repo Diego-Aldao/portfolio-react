@@ -14,6 +14,9 @@ const Links = styled.ul`
   a {
     padding: 10px;
   }
+  a:hover {
+    color: var(--color-principal);
+  }
 `;
 const Nombre = styled.p`
   text-align: center;

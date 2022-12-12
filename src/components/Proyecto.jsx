@@ -41,7 +41,7 @@ const ContenidoProyecto = styled.div`
     text-transform: capitalize;
     font-size: clamp(22px, 4vw, 26px);
     margin-bottom: 10px;
-    color: var(--white);
+    color: var(--color-fuente-principal);
   }
   ul {
     display: flex;
@@ -50,7 +50,7 @@ const ContenidoProyecto = styled.div`
     margin-bottom: 10px;
     li {
       margin: 0px 10px 5px 0px;
-      color: var(--light-slate);
+      color: var(--color-fuente-terciario);
       font-family: var(--fuente-mono);
       text-transform: capitalize;
       font-size: 15px;
@@ -77,7 +77,7 @@ const ContenidoProyecto = styled.div`
 const DescripcionProyecto = styled.div`
   padding: 20px 0px;
   p {
-    color: var(--light-slate);
+    color: var(--color-fuente-terciario);
     font-size: 16px;
   }
   span {
@@ -85,7 +85,7 @@ const DescripcionProyecto = styled.div`
   }
   @media (min-width: 768px) {
     padding: 25px;
-    background: var(--navy);
+    background: var(--color-bg-principal);
   }
 `;
 const LinksProyecto = styled.div`
@@ -95,7 +95,7 @@ const LinksProyecto = styled.div`
     height: 40px;
     display: inline-block;
     text-align: center;
-    color: var(--light-slate);
+    color: var(--color-fuente-terciario);
   }
 `;
 const ImgProyecto = styled.div`
@@ -118,7 +118,7 @@ const ImgProyecto = styled.div`
     position: absolute;
     top: 0px;
     left: 0px;
-    background: var(--navy);
+    background: var(--color-bg-principal);
     opacity: 0.8;
     transition: var(--transition);
   }

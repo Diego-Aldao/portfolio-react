@@ -7,10 +7,10 @@ const EstilosGlobales = createGlobalStyle`
   ${Variables};
 
   body {
-    background: var(--navy);
+    background: var(--color-bg-principal);
     font-family:var(--fuente-sans);
     line-height: 1.3;
-    color: var(--slate);
+    color: var(--color-fuente-secundario);
   }
 
   html {
@@ -32,7 +32,7 @@ const EstilosGlobales = createGlobalStyle`
   h6 {
    margin: 0 0 10px 0;
    font-weight: 600;
-   color: var(--lightest-slate);
+   color: var(--color-fuente-principal);
    line-height: 1.1;
   }
 

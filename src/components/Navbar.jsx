@@ -1,4 +1,9 @@
 import styled, { keyframes } from "styled-components";
+import inicio from "../images/iconos/inicio.png";
+import curso from "../images/iconos/curso.png";
+import proyecto from "../images/iconos/proyecto.png";
+import usuario from "../images/iconos/usuario.png";
+import contacto from "../images/iconos/contacto.png";
 
 const animacion = keyframes`
     0% { width: 50% ;}
@@ -13,7 +18,7 @@ const Navegacion = styled.nav`
   position: fixed;
   left: 0px;
   top: 0px;
-  background: var(--navy);
+  background: var(--color-bg-principal);
   z-index: 9;
   @media (min-width: 768px) {
     padding: 25px 50px;
@@ -67,7 +72,7 @@ const NavLinks = styled.ul`
   display: none;
   width: 100%;
   height: 100%;
-  color: var(--lightest-slate);
+  color: var(--color-fuente-principal);
   font-weight: 600;
   a {
     padding: 10px 15px;
@@ -84,7 +89,7 @@ const NavLinks = styled.ul`
       font-family: var(--fuente-mono);
     }
     a:hover {
-      color: var(--navy);
+      color: var(--color-bg-principal);
       background: var(--color-principal);
     }
   }
@@ -97,10 +102,10 @@ const NavLinks = styled.ul`
 `;
 
 const Numeracion = styled.span`
-  font-family: var(--fuente-mono);
-  margin-right: 5px;
-  color: var(--color-principal);
-  font-size: 14px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  margin-right: 10px;
 `;
 
 const BotonCurriculum = styled.a`
@@ -121,25 +126,41 @@ const Navbar = () => {
         <NavLinks>
           <li>
             <a href="#">
-              <Numeracion>01.</Numeracion>
+              <Numeracion>
+                <img src={inicio} alt="" />
+              </Numeracion>
               inicio
             </a>
           </li>
           <li>
             <a href="#">
-              <Numeracion>02.</Numeracion>
+              <Numeracion>
+                <img src={usuario} alt="" />
+              </Numeracion>
               about
             </a>
           </li>
           <li>
             <a href="#">
-              <Numeracion>03.</Numeracion>
+              <Numeracion>
+                <img src={curso} alt="" />
+              </Numeracion>
+              cursos
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Numeracion>
+                <img src={proyecto} alt="" />
+              </Numeracion>
               proyectos
             </a>
           </li>
           <li>
             <a href="#">
-              <Numeracion>04.</Numeracion>
+              <Numeracion>
+                <img src={contacto} alt="" />
+              </Numeracion>
               contacto
             </a>
           </li>

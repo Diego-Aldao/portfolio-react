@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Header = styled.header`
   margin: 120px 0px 50px;
   h1 {
-    color: var(--lightest-slate);
+    color: var(--color-fuente-principal);
     font-size: clamp(36px, 7vw, 72px);
     text-transform: capitalize;
     font-family: var(--fuente-sans);

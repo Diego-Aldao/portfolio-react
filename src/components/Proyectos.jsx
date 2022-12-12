@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import Proyecto from "./Proyecto";
+import proyecto from "../images/iconos/proyecto.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
   max-width: 1000px;
   margin: 0 auto;
 `;
-const HeaderNumerado = styled.header`
+const Header = styled.header`
   margin-bottom: 40px;
   span {
-    font-family: var(--fuente-mono);
     margin-right: 5px;
-    font-weight: 100;
     color: var(--color-principal);
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
   h2 {
     font-size: clamp(20px, 4vw, 26px);
@@ -26,11 +27,14 @@ const Contenido = styled.ul``;
 const Proyectos = () => {
   return (
     <Contenedor>
-      <HeaderNumerado>
+      <Header>
         <h2>
-          <span>03.</span>proyectos
+          <span>
+            <img src={proyecto} alt="" />
+          </span>
+          proyectos
         </h2>
-      </HeaderNumerado>
+      </Header>
       <Contenido>
         <Proyecto textend />
         <Proyecto imgend />

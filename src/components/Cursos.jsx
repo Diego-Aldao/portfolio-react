@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import cursos from "../data/cursos.json";
+import curso from "../images/iconos/curso.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -8,14 +9,14 @@ const Contenedor = styled.section`
   margin: 0 auto;
 `;
 
-const HeaderNumerado = styled.header`
+const Header = styled.header`
   margin-bottom: 40px;
   span {
-    font-family: var(--fuente-mono);
     margin-right: 5px;
-    font-weight: 100;
     color: var(--color-principal);
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
   h2 {
     font-size: clamp(20px, 4vw, 26px);
@@ -43,6 +44,7 @@ const Lista = styled.div`
     margin-bottom: 0px;
   }
 `;
+
 const Boton = styled.button`
   display: flex;
   justify-content: center;
@@ -50,7 +52,7 @@ const Boton = styled.button`
   min-width: 120px;
   padding: 0px 15px;
   border: 0px;
-  border-bottom: 2px solid var(--lightest-navy);
+  border-bottom: 2px solid var(--color-bg-secundario);
   height: 42px;
   background: none;
   transition: var(--transition);
@@ -59,7 +61,7 @@ const Boton = styled.button`
   }
   span {
     text-align: center;
-    color: var(--slate);
+    color: var(--color-fuente-secundario);
     text-transform: capitalize;
     font-family: var(--fuente-mono);
     font-size: 14px;
@@ -79,7 +81,7 @@ const Boton = styled.button`
   }
   @media (min-width: 600px) {
     border-bottom: none;
-    border-left: 2px solid var(--lightest-navy);
+    border-left: 2px solid var(--color-bg-secundario);
   }
 `;
 
@@ -96,7 +98,7 @@ const Detalle = styled.div`
   p {
     font-family: var(--fuente-mono);
     text-transform: capitalize;
-    color: var(--light-slate);
+    color: var(--color-fuente-terciario);
     font-size: 14px;
   }
   ul {
@@ -139,11 +141,14 @@ const Cursos = () => {
 
   return (
     <Contenedor>
-      <HeaderNumerado>
+      <Header>
         <h2>
-          <span>02.</span>cursos
+          <span>
+            <img src={curso} alt="" />
+          </span>
+          cursos
         </h2>
-      </HeaderNumerado>
+      </Header>
       <Contenido>
         <Lista>
           {listaCursos.cursos.map((curso) => {
@@ -153,7 +158,7 @@ const Cursos = () => {
                 onClick={() => handleClick(curso)}
                 className={currentCurso.id === curso.id ? "seleccionado" : ""}
               >
-                <span>{`curso 0${curso.id}`}</span>
+                <span>{curso.institucion}</span>
               </Boton>
             );
           })}

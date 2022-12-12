@@ -30,7 +30,7 @@ const MiniTexto = styled.span`
 `;
 
 const Titulo = styled.h1`
-  color: var(--lightest-slate);
+  color: var(--color-fuente-principal);
   font-size: clamp(36px, 7vw, 68px);
   text-transform: capitalize;
   font-family: var(--fuente-sans);
@@ -38,7 +38,7 @@ const Titulo = styled.h1`
   ${(props) =>
     props.subtitulo &&
     css`
-      color: var(--slate);
+      color: var(--color-fuente-secundario);
       margin-bottom: 20px;
       text-transform: lowercase;
       font-size: clamp(32px, 7vw, 60px);
@@ -49,7 +49,7 @@ const Titulo = styled.h1`
 `;
 
 const Descripcion = styled.p`
-  color: var(--slate);
+  color: var(--color-fuente-secundario);
   font-size: clamp(16px, 2vw, 18px);
   max-width: 540px;
   margin: 0px;
@@ -74,7 +74,7 @@ const Boton = styled.a`
   width: 140px;
   text-transform: capitalize;
   &:hover {
-    color: var(--navy);
+    color: var(--color-bg-secundario);
     background: var(--color-principal);
   }
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import user from "../images/iconos/usuario.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -6,17 +7,16 @@ const Contenedor = styled.section`
   margin: 0 auto;
 `;
 
-const HeaderNumerado = styled.header`
+const Header = styled.header`
   margin-bottom: 40px;
   span {
-    font-family: var(--fuente-mono);
     margin-right: 5px;
-    font-weight: 100;
-    color: var(--color-principal);
-    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
   }
   h2 {
-    font-size: clamp(20px, 4vw, 26px);
+    font-size: clamp(20px, 4vw, 32px);
     text-transform: capitalize;
     margin: 0px;
   }
@@ -56,22 +56,25 @@ const Tecnologias = styled.ul`
 const About = () => {
   return (
     <Contenedor>
-      <HeaderNumerado>
+      <Header>
         <h2>
-          <span>01.</span>sobre mi
+          <span>
+            <img src={user} alt="" />
+          </span>
+          sobre mi
         </h2>
-      </HeaderNumerado>
+      </Header>
       <Descripcion>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
           provident eligendi harum tempore consequatur odit expedita cumque
           exercitationem aliquid, quae officia illum non debitis, qui ducimus ex
-          soluta, assumenda molestiae. Neque itaque inventore{" "}
+          soluta, assumenda molestiae. Neque itaque inventore
           <span>veritatis laborum?</span>
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolor
-          laboriosam accusantium similique <span>laborum iste vitae</span>{" "}
+          laboriosam accusantium similique <span>laborum iste vitae</span>
           accusamus odio, voluptatum eius, excepturi necessitatibus vel repellat
           quis?
         </p>

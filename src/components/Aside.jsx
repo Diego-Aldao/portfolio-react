@@ -9,7 +9,7 @@ const Social = styled.div`
   left: 40px;
   right: auto;
   z-index: 10;
-  color: var(--light-slate);
+  color: var(--color-fuente-terciario);
   display: none;
   &:after {
     content: "";
@@ -17,7 +17,7 @@ const Social = styled.div`
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: var(--light-slate);
+    background-color: var(--color-fuente-terciario);
   }
   @media (min-width: 768px) {
     display: block;
@@ -53,7 +53,7 @@ const Email = styled.div`
   right: 40px;
   left: auto;
   z-index: 10;
-  color: var(--light-slate);
+  color: var(--color-fuente-terciario);
   display: none;
   a {
     margin: 20px auto;
@@ -74,7 +74,7 @@ const Email = styled.div`
     width: 1px;
     height: 90px;
     margin: 0px auto;
-    background-color: var(--light-slate);
+    background-color: var(--color-fuente-terciario);
   }
   @media (min-width: 768px) {
     display: block;

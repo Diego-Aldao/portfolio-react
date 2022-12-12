@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 
 const Item = animated(styled.div`
   padding: 2rem 1.75rem;
-  background-color: var(--light-navy);
+  background-color: var(--color-bg-secundario);
   font-family: var(--fuente-sans);
   max-height: 325px;
   position: relative;
@@ -17,7 +17,7 @@ const ContenidoItem = styled.div`
   align-items: flex-start;
   position: relative;
   height: 100%;
-  background-color: var(--light-navy);
+  background-color: var(--color-bg-secundario);
   transition: var(--transition);
   &:hover {
     h3 {
@@ -48,14 +48,15 @@ const ItemHead = styled.div`
   }
 `;
 const ItemTitulo = styled.h3`
-  color: var(--lightest-slate);
+  color: var(--color-fuente-principal);
   font-size: 20px;
   line-height: 1.3;
   transition: var(--transition);
+  text-transform: capitalize;
 `;
 
 const ItemDescripcion = styled.p`
-  color: var(--light-slate);
+  color: var(--color-fuente-terciario);
   font-size: 14px;
 `;
 

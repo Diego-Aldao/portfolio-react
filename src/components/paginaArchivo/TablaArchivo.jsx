@@ -16,8 +16,8 @@ const Tabla = styled.table`
   th {
     font-size: clamp(14px, 2vw, 18px);
   }
-  tr:hover {
-    background: var(--light-navy);
+  tbody tr:hover {
+    background: var(--color-bg-secundario);
   }
 `;
 
@@ -48,7 +48,7 @@ const Año = styled.td`
   font-size: clamp(14px, 2vw, 18px);
 `;
 const Titulo = styled.td`
-  color: var(--lightest-slate);
+  color: var(--color-fuente-terciario);
   font-weight: 600;
 `;
 
