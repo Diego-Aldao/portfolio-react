@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import contacto from "../images/iconos/contacto.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -56,12 +55,7 @@ const Contacto = () => {
   return (
     <Contenedor>
       <Header>
-        <h2>
-          <span>
-            <img src={contacto} alt="" />
-          </span>
-          contacto
-        </h2>
+        <h2>contacto</h2>
       </Header>
       <Titulo>trabajemos juntos</Titulo>
       <p>

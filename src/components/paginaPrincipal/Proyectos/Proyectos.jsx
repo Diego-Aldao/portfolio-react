@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Proyecto from "./Proyecto";
-import proyecto from "../images/iconos/proyecto.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -28,12 +27,7 @@ const Proyectos = () => {
   return (
     <Contenedor>
       <Header>
-        <h2>
-          <span>
-            <img src={proyecto} alt="" />
-          </span>
-          proyectos
-        </h2>
+        <h2>proyectos</h2>
       </Header>
       <Contenido>
         <Proyecto textend />

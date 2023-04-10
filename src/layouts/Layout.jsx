@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import Aside from "./Aside";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Aside from "../components/Aside";
 
 const Contenedor = styled.main`
   padding: 0px 25px;

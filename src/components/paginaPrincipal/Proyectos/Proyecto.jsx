@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import imgPrueba from "../images/img-prueba.jpg";
+import imgPrueba from "../../../images/img-prueba.jpg";
 import { Icon } from "@iconify/react";
 
 const Item = styled.li`

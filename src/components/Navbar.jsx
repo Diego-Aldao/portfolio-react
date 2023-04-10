@@ -1,9 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import inicio from "../images/iconos/inicio.png";
-import curso from "../images/iconos/curso.png";
-import proyecto from "../images/iconos/proyecto.png";
-import usuario from "../images/iconos/usuario.png";
-import contacto from "../images/iconos/contacto.png";
 
 const animacion = keyframes`
     0% { width: 50% ;}
@@ -125,44 +120,19 @@ const Navbar = () => {
         <Logo>D</Logo>
         <NavLinks>
           <li>
-            <a href="#">
-              <Numeracion>
-                <img src={inicio} alt="" />
-              </Numeracion>
-              inicio
-            </a>
+            <a href="#">inicio</a>
           </li>
           <li>
-            <a href="#">
-              <Numeracion>
-                <img src={usuario} alt="" />
-              </Numeracion>
-              about
-            </a>
+            <a href="#">about</a>
           </li>
           <li>
-            <a href="#">
-              <Numeracion>
-                <img src={curso} alt="" />
-              </Numeracion>
-              cursos
-            </a>
+            <a href="#">cursos</a>
           </li>
           <li>
-            <a href="#">
-              <Numeracion>
-                <img src={proyecto} alt="" />
-              </Numeracion>
-              proyectos
-            </a>
+            <a href="#">proyectos</a>
           </li>
           <li>
-            <a href="#">
-              <Numeracion>
-                <img src={contacto} alt="" />
-              </Numeracion>
-              contacto
-            </a>
+            <a href="#">contacto</a>
           </li>
           <li>
             <BotonCurriculum>curriculum</BotonCurriculum>

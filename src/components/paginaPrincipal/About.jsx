@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import user from "../images/iconos/usuario.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -57,12 +56,7 @@ const About = () => {
   return (
     <Contenedor>
       <Header>
-        <h2>
-          <span>
-            <img src={user} alt="" />
-          </span>
-          sobre mi
-        </h2>
+        <h2>sobre mi</h2>
       </Header>
       <Descripcion>
         <p>

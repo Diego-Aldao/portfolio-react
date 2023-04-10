@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import cursos from "../data/cursos.json";
-import curso from "../images/iconos/curso.png";
+import cursos from "../../../data/cursos.json";
+import curso from "../../../images/iconos/curso.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;

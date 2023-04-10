@@ -2,9 +2,8 @@ import styled from "styled-components";
 import ItemArchivo from "./ItemArchivo";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import archivo from "../data/proyectos.json";
+import archivo from "../../../data/proyectos.json";
 import { useSpring, useTrail, animated } from "react-spring";
-import listado from "../images/iconos/lista-proyectos.png";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
@@ -93,9 +92,6 @@ const Archivo = () => {
     <Contenedor>
       <Header>
         <h2>
-          <span>
-            <img src={listado} alt="" />
-          </span>
           lista de proyectos <VerMas to="/archivo">- ver el archivo -</VerMas>
         </h2>
       </Header>
