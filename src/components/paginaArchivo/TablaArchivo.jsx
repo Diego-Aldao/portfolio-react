@@ -62,7 +62,10 @@ const Icono = styled(Icon)`
 `;
 
 const TablaArchivo = () => {
-  const [listaArchivo, setListaArchivo] = useState(archivo.data);
+  let { data } = archivo;
+
+  const [listaArchivo, setListaArchivo] = useState(data);
+
   return (
     <Tabla>
       <thead>
@@ -76,15 +79,15 @@ const TablaArchivo = () => {
       <tbody>
         {listaArchivo.map((item) => {
           return (
-            <tr>
+            <tr key={item.id}>
               <Año>{item.año}</Año>
               <Titulo>{item.titulo}</Titulo>
               <ListaTech>
                 {item.tecnologias.map((tecnologia) => {
                   return (
-                    <span>
+                    <span key={tecnologia.id}>
                       <Separador>·</Separador>
-                      {tecnologia}
+                      {tecnologia.nombre}
                     </span>
                   );
                 })}
