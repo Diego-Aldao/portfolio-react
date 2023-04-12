@@ -6,7 +6,7 @@ const Social = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  left: 40px;
+  left: 10px;
   right: auto;
   z-index: 10;
   color: var(--color-fuente-terciario);
@@ -50,7 +50,7 @@ const Email = styled.div`
   width: 40px;
   position: fixed;
   bottom: 0px;
-  right: 40px;
+  right: 10px;
   left: auto;
   z-index: 10;
   color: var(--color-fuente-terciario);
@@ -59,7 +59,6 @@ const Email = styled.div`
     margin: 20px auto;
     padding: 10px;
     font-family: var(--fuente-mono);
-    letter-spacing: 0.1em;
     writing-mode: vertical-rl;
     font-size: 14px;
   }
