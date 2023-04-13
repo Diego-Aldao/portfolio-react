@@ -9,7 +9,6 @@ const EstilosGlobales = createGlobalStyle`
   body {
     background: var(--color-bg-principal);
     font-family:var(--fuente-sans);
-    line-height: 1.3;
     color: var(--color-fuente-secundario);
   }
 
@@ -35,6 +34,9 @@ const EstilosGlobales = createGlobalStyle`
    color: var(--color-fuente-principal);
    line-height: 1.1;
   }
+  h1,h2,h3,h4,h5,h6,p,span,a{
+    letter-spacing: 0.4px;
+  }
 
   h1, a {
     font-family: var(--fuente-mono);
@@ -46,12 +48,17 @@ const EstilosGlobales = createGlobalStyle`
    max-width: 100%;
    vertical-align: middle;
   }
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   
   p {
    margin: 0 0 15px 0;
    line-height: 1.5;
    font-size: clamp(16px, 2vw, 18px);
-
    &:last-child,
    &:last-of-type {
      margin: 0;
