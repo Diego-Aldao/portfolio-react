@@ -7,42 +7,120 @@
       "titulo": "covid-19 data",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     },
     {
       "id": 2,
       "titulo": "design echo",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     },
     {
       "id": 3,
       "titulo": "tattoo",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     },
     {
       "id": 4,
       "titulo": "clima",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     },
     {
       "id": 5,
       "titulo": "angular",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     },
     {
       "id": 6,
       "titulo": "kids",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
       "año": "2021",
-      "tecnologias": ["react", "styled-components", "react-router"]
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "react-router"
+        }
+      ]
     }
   ]
 }

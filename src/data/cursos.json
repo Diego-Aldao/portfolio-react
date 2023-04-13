@@ -1,60 +1,107 @@
 {
   "id": 1,
   "nombre": "cursos",
+  "descripcion": "En mi camino de aprendizaje, he completado varios cursos en línea y presenciales que me han ayudado a adquirir nuevos conocimientos y habilidades en tecnologías relacionadas con el desarrollo web.",
   "cursos": [
     {
       "id": 1,
-      "titulo": "desarrollo fullstack mern1",
-      "institucion": "iters",
-      "fechaInicio": "ago 2021",
-      "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
+      "titulo": "#yoProgramo",
+      "institucion": "argentina programa",
+      "fechaInicio": "mar 2022",
+      "fechaFin": "oct 2022",
+      "descripcion": "Segunda etapa de argentina programa, donde aprendí sobre SCRUM(roles, artefactos, eventos), Github(repositorios, branchs, commit), frontend dinámico con Angular(componentes, modules, services), backend con Java(OOP, JVM, herencia, poliformismo) y bases de datos con MySql (tablas, índices, consultas).",
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "angular"
+        },
+        {
+          "id": 2,
+          "nombre": "java"
+        },
+        {
+          "id": 3,
+          "nombre": "springBoot"
+        },
+        {
+          "id": 4,
+          "nombre": "sql"
+        },
+        {
+          "id": 5,
+          "nombre": "github"
+        }
+      ]
     },
     {
       "id": 2,
-      "titulo": "desarrollo fullstack mern2",
-      "institucion": "#yoProgramo",
+      "titulo": "desarrollo fullstack MERN",
+      "institucion": "iters",
       "fechaInicio": "ago 2021",
       "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
+      "descripcion": "Conceptos básicos de HTML(etiquetas y atributos, html5), de CSS(box model, flexbox, responsive) y JavaScript (tipos y estructuras de datos, condicionales, loops, ES6, Asincronía). Introducción a las tecnologías del stack MERN. Creación de un proyecto final aplicando todo lo aprendido.",
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "html"
+        },
+        {
+          "id": 2,
+          "nombre": "css"
+        },
+        {
+          "id": 3,
+          "nombre": "javaScript"
+        },
+        {
+          "id": 4,
+          "nombre": "react"
+        },
+        {
+          "id": 5,
+          "nombre": "node.js"
+        },
+        {
+          "id": 6,
+          "nombre": "mongodb"
+        }
+      ]
     },
     {
       "id": 3,
-      "titulo": "desarrollo fullstack mern3",
-      "institucion": "scrimba",
-      "fechaInicio": "ago 2021",
-      "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
+      "titulo": "introducción a react",
+      "institucion": "victor robles",
+      "fechaInicio": "mar 2022",
+      "fechaFin": "abr 2022",
+      "descripcion": "Curso de introducción a react en la plataforma Udemy donde aprendí lo básico de la librería, como su instalación, qué es jsx, qué son los componentes, y la estructura basica de un proyecto en react",
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        }
+      ]
     },
     {
       "id": 4,
-      "titulo": "desarrollo fullstack mern4",
-      "institucion": "udemy",
-      "fechaInicio": "ago 2021",
-      "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
-    },
-    {
-      "id": 5,
-      "titulo": "desarrollo fullstack mern5",
-      "institucion": "iters",
-      "fechaInicio": "ago 2021",
-      "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
-    },
-    {
-      "id": 6,
-      "titulo": "desarrollo fullstack mern6",
-      "institucion": "iters",
-      "fechaInicio": "ago 2021",
-      "fechaFin": "feb 2022",
-      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam.",
-      "tecnologias": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea voluptatibus explicabo tempora repellendus quisquam."
+      "titulo": "learn react",
+      "institucion": "bob ziroll",
+      "fechaInicio": " mar 2022",
+      "fechaFin": "abr 2022",
+      "descripcion": "Curso de react en la plataforma Scrimba donde continué el aprendizaje de la libreria, aprendiendo sobre hooks, props, formularios y llamadas de API en react",
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "formik"
+        },
+        {
+          "id": 1,
+          "nombre": "yup"
+        }
+      ]
     }
   ]
 }
