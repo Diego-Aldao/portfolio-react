@@ -1,12 +1,9 @@
 import styled from "styled-components";
 import Header from "../../HeaderSecciones";
 import { Icon } from "@iconify/react";
-
-const Contenedor = styled.section`
-  padding: 60px 0px;
-  max-width: 1000px;
-  margin: 0 auto;
-`;
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import Section from "../../Section";
 
 const Descripcion = styled.div`
   span {
@@ -25,7 +22,7 @@ const Tecnologias = styled.ul`
   li {
     position: relative;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 15px;
     font-family: var(--fuente-mono);
     text-transform: capitalize;
     display: flex;
@@ -37,6 +34,9 @@ const Tecnologias = styled.ul`
       margin-left: 10px;
       color: #8035e5;
     }
+    p {
+      font-size: 14px;
+    }
   }
   li:before {
     content: "▹";
@@ -47,12 +47,21 @@ const Tecnologias = styled.ul`
   }
 `;
 
-const About = () => {
+const About = ({ setCurrentSection }) => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0.9,
+  });
+
+  useEffect(() => {
+    if (inView) setCurrentSection("about");
+  }, [inView]);
+
   return (
-    <Contenedor id="about">
+    <Section id="about">
+      <div className="destino"></div>
       <Header titulo={"sobre mi"} />
       <Descripcion>
-        <p>
+        <p ref={ref}>
           ¡Hola! soy Diego, un desarrollador jr. viviendo en Mendoza, Arg. Tengo
           formacion y comprension solida de los conceptos fundamentales del
           desarrollo web, como <span>html</span>, <span>css</span> y{" "}
@@ -60,12 +69,6 @@ const About = () => {
           aplicaciones utilizando <span>react</span> y he desarrollado proyectos
           que involucran la construccion de componentes, la gestion del estado y
           la integracion de <span>APIs</span>
-        </p>
-        <p>
-          Soy un desarrollador apasionado y motivado que busca unirse a un
-          equipo de desarrollo para aprender, crecer y construir soluciones
-          efectivas. Estoy emocionado de explorar nuevas oportunidades y
-          contribuir a proyectos.
         </p>
         <p>
           Estas son las tecnologías y herramientas con las que he trabajado
@@ -110,7 +113,7 @@ const About = () => {
           </li>
         </Tecnologias>
       </Descripcion>
-    </Contenedor>
+    </Section>
   );
 };
 
