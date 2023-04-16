@@ -3,7 +3,6 @@ import Fonts from "./Fonts";
 import Variables from "./Variables";
 
 const EstilosGlobales = createGlobalStyle`
-  ${Fonts};
   ${Variables};
 
   body {
