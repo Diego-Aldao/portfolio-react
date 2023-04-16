@@ -1,35 +1,30 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import cursos from "../../../data/cursos.json";
-import curso from "../../../images/iconos/curso.png";
-
-const Contenedor = styled.section`
-  padding: 60px 0px;
-  max-width: 700px;
-  margin: 0 auto;
-`;
-
-const Header = styled.header`
-  margin-bottom: 40px;
-  span {
-    margin-right: 5px;
-    color: var(--color-principal);
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-  }
-  h2 {
-    font-size: clamp(20px, 4vw, 26px);
-    text-transform: capitalize;
-    margin: 0px;
-  }
-`;
+import Header from "../../HeaderSecciones";
+import { useSpring } from "@react-spring/web";
+import ItemCurso from "./ItemCurso";
+import { useInView } from "react-intersection-observer";
+import Section from "../../Section";
 
 const Contenido = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 581px;
+  @media (min-width: 450px) {
+    min-height: 391px;
+  }
+
   @media (min-width: 600px) {
     flex-direction: row;
+  }
+  @media (min-width: 700px) {
+    min-height: 333px;
+  }
+  @media (min-width: 900px) {
+    min-height: 262px;
   }
 `;
 
@@ -46,6 +41,7 @@ const Lista = styled.div`
 `;
 
 const Boton = styled.button`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,20 +52,21 @@ const Boton = styled.button`
   height: 42px;
   background: none;
   transition: var(--transition);
+  color: var(--color-fuente-principal);
   &::selection {
     color: var(--color-principal);
   }
   span {
     text-align: center;
-    color: var(--color-fuente-secundario);
     text-transform: capitalize;
     font-family: var(--fuente-mono);
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     transition: var(--transition);
   }
   &.seleccionado {
     border-color: var(--color-principal);
+    background: var(--color-bg-secundario);
     span {
       color: var(--color-principal);
     }
@@ -85,71 +82,50 @@ const Boton = styled.button`
   }
 `;
 
-const Detalle = styled.div`
-  h3 {
-    text-transform: capitalize;
-    margin-bottom: 5px;
-  }
-  h4 {
-    color: var(--color-principal);
-    text-transform: capitalize;
-    margin-bottom: 7px;
-  }
-  p {
-    font-family: var(--fuente-mono);
-    text-transform: capitalize;
-    color: var(--color-fuente-terciario);
-    font-size: 14px;
-  }
-  ul {
-    margin-top: 25px;
-  }
-  li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    letter-spacing: 0.2px;
-    line-height: 1.5;
-
-    &:before {
-      content: "▹";
-      position: absolute;
-      left: 0px;
-      color: var(--color-principal);
-    }
-  }
-  @media (min-width: 600px) {
-    margin-left: 20px;
-    width: calc(100% - 145px);
-    padding: 10px 5px;
-  }
-`;
-
-const Cursos = () => {
+const Cursos = ({ setCurrentSection }) => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0.3,
+  });
   const [listaCursos, setListaCursos] = useState(cursos);
   const [currentCurso, setCurrentCurso] = useState({});
+  const [springs, api] = useSpring(() => ({
+    from: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+    },
+    config: { mass: 5, tension: 2000, friction: 100 },
+  }));
 
   useEffect(() => {
     const primerCurso = listaCursos.cursos.filter((curso) => curso.id === 1)[0];
     setCurrentCurso(primerCurso);
   }, []);
 
+  useEffect(() => {
+    if (inView) setCurrentSection("cursos");
+  }, [inView]);
+
   const handleClick = (curso) => {
     setCurrentCurso(curso);
+    api.start({
+      from: {
+        x: 20,
+        y: 20,
+        opacity: 0,
+      },
+      to: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+      },
+    });
   };
 
   return (
-    <Contenedor>
-      <Header>
-        <h2>
-          <span>
-            <img src={curso} alt="" />
-          </span>
-          cursos
-        </h2>
-      </Header>
-      <Contenido>
+    <Section id={"cursos"}>
+      <Header titulo={cursos.nombre} descripcion={cursos.descripcion} />
+      <Contenido ref={ref}>
         <Lista>
           {listaCursos.cursos.map((curso) => {
             return (
@@ -163,23 +139,9 @@ const Cursos = () => {
             );
           })}
         </Lista>
-        <Detalle>
-          {currentCurso.id ? (
-            <>
-              <h3>{currentCurso.titulo}</h3>
-              <h4>{currentCurso.institucion}</h4>
-              <p>{`${currentCurso.fechaInicio} - ${currentCurso.fechaFin}`}</p>
-              <ul>
-                <li>{currentCurso.descripcion}.</li>
-                <li>{currentCurso.tecnologias}</li>
-              </ul>
-            </>
-          ) : (
-            <p>loading</p>
-          )}
-        </Detalle>
+        {currentCurso.id && <ItemCurso curso={currentCurso} style={springs} />}
       </Contenido>
-    </Contenedor>
+    </Section>
   );
 };
 
