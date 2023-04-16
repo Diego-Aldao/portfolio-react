@@ -86,17 +86,12 @@ const Aside = () => {
       <Social>
         <ListaSocial>
           <li>
-            <a href="#">
+            <a href="https://github.com/Diego-Aldao">
               <Icon icon="charm:github" inline={true} />
             </a>
           </li>
           <li>
-            <a href="#">
-              <Icon icon="akar-icons:instagram-fill" inline={true} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/diego-aldao">
               <Icon icon="lucide:linkedin" inline={true} />
             </a>
           </li>
