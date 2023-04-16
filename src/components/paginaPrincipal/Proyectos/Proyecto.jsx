@@ -1,174 +1,250 @@
-import styled from "styled-components";
-import imgPrueba from "../../../images/img-prueba.jpg";
+import React from "react";
+import styled, { css } from "styled-components";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
-const Item = styled.li`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  margin-bottom: 30px;
-  align-items: center;
-  transition: var(--transition);
-  @media (min-width: 480px) {
-    margin-bottom: 70px;
+const ImagenProyecto = styled.div`
+  width: 100%;
+  max-height: 350px;
+  position: relative;
+  @media (min-width: 768px) {
+    grid-row: -1;
+    grid-column: ${({ imagen }) => (imagen ? "6 / 13" : "1 / 8")};
+  }
+  @media (min-width: 1024px) {
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: var(--color-principal);
+      mix-blend-mode: multiply;
+      transition: var(--transition);
+    }
+    img {
+      filter: grayscale(100%);
+    }
+  }
+`;
+
+const LinksProyecto = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  a {
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 3;
+    svg {
+      width: 15px;
+      margin-left: 5px;
+    }
+  }
+  a:after {
+    content: "";
+    position: absolute;
+
+    ${({ imagen }) =>
+      imagen
+        ? css`
+            left: 0px;
+          `
+        : css`
+            right: 0px;
+          `};
+    bottom: -2px;
+    width: 0px;
+    height: 1px;
+    background: var(--color-fuente-principal);
+    transition: var(--transition);
+  }
+  a:first-child {
+    margin-right: 15px;
+  }
+
+  a:hover {
+    color: var(--color-principal);
   }
   @media (min-width: 768px) {
-    margin-bottom: 100px;
+    justify-content: ${({ imagen }) => (imagen ? "flex-start" : "flex-end")};
   }
-  &:hover {
+`;
+const DescripcionProyecto = styled.div`
+  background: var(--color-bg-principal);
+  margin-bottom: 10px;
+  p {
+    font-size: 14px;
+    font-family: var(--fuente-sans);
+  }
+  p:first-letter {
+    text-transform: capitalize;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    padding: ${({ imagen }) =>
+      imagen ? "10px 5px 10px 0px" : "10px 0px 10px 10px"};
+  }
+`;
+
+const ListaTecnologias = styled.ul`
+  background: var(--color-bg-principal);
+  padding: 0px 0px 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  li {
+    padding: 0px 15px 5px 0px;
+    color: var(--color-fuente-principal);
+    font-family: var(--fuente-mono);
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  @media (min-width: 768px) {
+    justify-content: ${({ imagen }) => (imagen ? "flex-start" : "flex-end")};
+    li {
+      padding: ${({ imagen }) =>
+        imagen ? "0px 15px 5px 0px" : " 0px 0px 5px 15px"};
+    }
+  }
+`;
+
+const Item = styled.div`
+  width: 100%;
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: 1fr;
+  max-width: 550px;
+  margin: 0 auto 50px;
+  position: relative;
+  p,
+  h3 {
+    font-family: var(--fuente-sans);
+  } //como el padre es un anchor, y los anchors tienen fuente mono, en este caso tengo que sobreescribir la fuente
+  @media (min-width: 768px) {
+    min-height: 280px;
+    max-width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    padding: ${({ imagen }) =>
+      imagen ? "0px 0px 0px 15px" : "0px 15px 0px 0px"};
+  }
+  @media (min-width: 1024px) {
+    min-height: 320px;
+  }
+  &:hover ${ImagenProyecto} {
+    //cambia los estilos de otro styled components en hover, y dicho componente tiene que estar declarado antes que este
     img {
       filter: brightness(100%);
     }
-    div:after {
+    &:after {
       background: none;
     }
+  }
+  &:hover ${LinksProyecto} {
+    a:after {
+      width: 100%;
+    }
+  }
+  &:hover ${DescripcionProyecto}, &:hover ${ListaTecnologias}, &:hover {
+    background: var(--color-bg-secundario);
   }
 `;
 
 const ContenidoProyecto = styled.div`
-  grid-column: 1 / -1;
-  padding: 25px 25px 20px;
+  padding: 15px 0px;
   position: relative;
-  z-index: 5;
-  grid-row: 1 / -1;
-  .subtitulo {
-    font-family: var(--fuente-mono);
-    color: var(--color-principal);
-    text-transform: capitalize;
-    font-size: 13px;
-    margin-bottom: 10px;
-  }
   h3 {
     text-transform: capitalize;
     font-size: clamp(22px, 4vw, 26px);
     margin-bottom: 10px;
-    color: var(--color-fuente-principal);
   }
-  ul {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  .subtitulo {
+    font-family: var(--fuente-mono);
+    text-transform: capitalize;
+    font-size: 13px;
     margin-bottom: 10px;
-    li {
-      margin: 0px 10px 5px 0px;
-      color: var(--color-fuente-terciario);
-      font-family: var(--fuente-mono);
-      text-transform: capitalize;
-      font-size: 15px;
-      font-weight: 600;
-    }
-  }
-  @media (min-width: 480px) {
-    padding: 40px 40px 30px;
-  }
-  @media (min-width: 768px) {
-    grid-column: ${(props) => (props.textend ? "5 / 13" : "1 / 9")};
-    text-align: ${(props) => (props.textend ? "end" : "start")};
-    padding: 0px;
-    ul {
-      justify-content: ${(props) =>
-        props.textend ? "flex-end" : "flex-start"};
-    }
-  }
-  @media (min-width: 1080px) {
-    grid-column: ${(props) => (props.textend ? "7 / 13" : "1 / 7")};
-  }
-`;
-
-const DescripcionProyecto = styled.div`
-  padding: 20px 0px;
-  p {
-    color: var(--color-fuente-terciario);
-    font-size: 16px;
-  }
-  span {
     color: var(--color-principal);
   }
   @media (min-width: 768px) {
-    padding: 25px;
-    background: var(--color-bg-principal);
-  }
-`;
-const LinksProyecto = styled.div`
-  a {
-    padding: 10px;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    text-align: center;
-    color: var(--color-fuente-terciario);
-  }
-`;
-const ImgProyecto = styled.div`
-  grid-column: 1 / -1;
-  height: 100%;
-  max-height: 340px;
-  position: relative;
-  z-index: 1;
-  grid-row: 1 / -1;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%) contrast(1) brightness(70%);
-  }
-  &:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background: var(--color-bg-principal);
-    opacity: 0.8;
-    transition: var(--transition);
-  }
-  &:hover {
-    img {
-      filter: brightness(100%);
-    }
-    &:after {
-      background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-row: -1;
+    grid-column: ${({ imagen }) => (imagen ? "1 / 9" : "5 / 13")};
+    text-align: ${({ imagen }) => (imagen ? "start" : "end")};
+    padding: 0px;
+    .subtitulo {
+      margin-bottom: 0px;
     }
   }
-  @media (min-width: 768px) {
-    grid-column: ${(props) => (props.imgend ? "6 / 13" : "1 / 8")};
-    &:after {
-      background: var(--color-principal);
-      mix-blend-mode: multiply;
-    }
+  @media (min-width: 1080px) {
+    grid-column: ${({ imagen }) => (imagen ? "1 / 7" : "7 / 13")};
   }
 `;
 
-const Proyecto = ({ textend, imgend }) => {
+const Especial = styled(Link)`
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  content: "";
+  z-index: 2;
+`;
+
+const Proyecto = ({ data }) => {
+  const {
+    titulo,
+    tipo,
+    descripcion,
+    tecnologias,
+    links,
+    imagenUrl,
+    imagenEnd,
+  } = data;
   return (
-    <Item>
-      <ImgProyecto imgend={imgend}>
-        <img src={imgPrueba} alt="" />
-      </ImgProyecto>
-      <ContenidoProyecto textend={textend}>
-        <p className="subtitulo">react app</p>
-        <h3>echo design</h3>
-        <DescripcionProyecto>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Voluptatem, recusandae quibusdam.
-            <span> Nihil iusto amet porro</span> incidunt corrupti odio aut
-            delectus.
-          </p>
+    <Item imagen={imagenEnd}>
+      <Especial to={links[0].url} target="_blank" />
+      <ImagenProyecto imagen={imagenEnd}>
+        <img src={imagenUrl} alt="" />
+      </ImagenProyecto>
+      <ContenidoProyecto imagen={imagenEnd}>
+        <h3>{titulo}</h3>
+        <p className="subtitulo">{tipo}</p>
+        <DescripcionProyecto imagen={imagenEnd}>
+          <p>{descripcion}</p>
         </DescripcionProyecto>
-        <ul>
-          <li>vs code</li>
-          <li>prettier</li>
-          <li>eslint</li>
-          <li>javas</li>
-        </ul>
-        <LinksProyecto>
-          <a href="">
-            <Icon icon="mi:external-link" inline={true} />
-          </a>
-          <a href="">
-            <Icon icon="charm:github" inline={true} />
-          </a>
+        <ListaTecnologias imagen={imagenEnd}>
+          {tecnologias.map((tecnologia) => {
+            return <li key={tecnologia.id}>{tecnologia.nombre}</li>;
+          })}
+        </ListaTecnologias>
+        <LinksProyecto imagen={imagenEnd}>
+          {links.map((link) => {
+            return (
+              <React.Fragment key={link.id}>
+                {link.codigo ? (
+                  <a href={`${link.url}`} target="_blank">
+                    <span>ver código</span>
+                    <Icon icon="charm:github" inline={true} />
+                  </a>
+                ) : (
+                  <a href={link.url} target="_blank">
+                    <span>ver sitio</span>
+                    <Icon icon="mi:external-link" inline={true} />
+                  </a>
+                )}
+              </React.Fragment>
+            );
+          })}
         </LinksProyecto>
       </ContenidoProyecto>
     </Item>
