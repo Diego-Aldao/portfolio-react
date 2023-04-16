@@ -68,7 +68,7 @@ const Archivo = () => {
   });
 
   //Para crear un efecto en cadena de animaciones, es necesario useTrail de react-spring
-  const trail = useTrail(9, {
+  const trail = useTrail(maxLista, {
     config: { mass: 5, tension: 4000, friction: 200 },
     opacity: toggle ? 1 : 0,
     left: toggle ? 0 : 50,
@@ -86,6 +86,11 @@ const Archivo = () => {
     toggle ? setMaxLista(3) : setMaxLista(6);
     setToggle(!toggle);
   };
+
+  useEffect(() => {
+    let filtrados = listaArchivo.filter((item) => item.principal !== true);
+    setListaArchivo(filtrados);
+  }, []);
 
   return (
     <Contenedor>
