@@ -1,28 +1,25 @@
 import styled from "styled-components";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavBar/Navbar";
 import Aside from "../components/Aside";
 
 const Contenedor = styled.main`
-  padding: 0px 25px;
+  padding: 0px 15px;
   width: 100%;
-  max-width: 1600px;
   margin: 0 auto;
+  position: relative;
   @media (min-width: 480px) {
-    padding: 0px 50px 0px;
+    padding: 0px 25px 0px;
   }
   @media (min-width: 768px) {
-    padding: 0px 100px;
-  }
-  @media (min-width: 1080px) {
-    padding: 0px 150px 0px;
+    padding: 0px 60px 0px;
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, currentSection }) => {
   return (
     <Contenedor>
-      <Navbar />
+      <Navbar currentSection={currentSection} />
       <Aside />
       {children}
       <Footer />
