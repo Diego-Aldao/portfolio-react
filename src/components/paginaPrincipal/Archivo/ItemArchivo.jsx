@@ -1,23 +1,43 @@
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
-import { animated } from "react-spring";
+import { animated } from "@react-spring/web";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = animated(styled.div`
-  padding: 2rem 1.75rem;
+const Item = styled(animated.div)`
   background-color: var(--color-bg-secundario);
   font-family: var(--fuente-sans);
-  max-height: 325px;
   position: relative;
-`);
+  height: 350px;
+  &:first-child {
+    top: 0px !important;
+    left: 0px !important;
+    opacity: 1 !important;
+  }
+  @media (min-width: 565px) {
+    &:nth-child(-n + 2) {
+      top: 0px !important;
+      left: 0px !important;
+      opacity: 1 !important;
+    }
+  }
+  @media (min-width: 900px) {
+    &:nth-child(-n + 3) {
+      top: 0px !important;
+      left: 0px !important;
+      opacity: 1 !important;
+    }
+  }
+`;
 
 const ContenidoItem = styled.div`
+  padding: 25px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
   height: 100%;
-  background-color: var(--color-bg-secundario);
   transition: var(--transition);
   &:hover {
     h3 {
@@ -33,17 +53,21 @@ const ItemHead = styled.div`
   height: 40px;
   margin-bottom: 35px;
   div {
+    position: relative;
+    z-index: 2;
     display: flex;
-    svg {
-      height: 22px;
-      margin-right: 15px;
+    a {
+      margin: 3px 5px 0px 0px;
       transition: var(--transition);
     }
-    svg:hover {
+    svg {
+      height: 22px;
+    }
+    a:hover {
       color: var(--color-principal);
     }
-    svg:last-of-type {
-      margin: 0px;
+    a:last-of-type {
+      margin: 3px 0px 0px 0px;
     }
   }
 `;
@@ -63,9 +87,9 @@ const ItemDescripcion = styled.p`
 const ItemTecno = styled.ul`
   display: flex;
   margin-top: 20px;
-  align-items: flex-end;
   flex-grow: 1;
   flex-wrap: wrap;
+  align-content: flex-end;
   li {
     margin-right: 15px;
     font-family: var(--fuente-mono);
@@ -81,22 +105,45 @@ const Carpeta = styled(Icon)`
   width: 40px;
 `;
 
+const Especial = styled(Link)`
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  content: "";
+`;
+
 const ItemArchivo = ({ data, style }) => {
   return (
-    <Item style={data.id > 3 ? style : null}>
+    <Item style={style}>
       <ContenidoItem>
+        <Especial to={data.links[0].url} target="_blank"></Especial>
         <ItemHead>
-          <Carpeta icon="carbon:folder" inline={true} />
+          <Carpeta icon="carbon:folder" />
           <div>
-            <Icon icon="charm:github" inline={true} />
-            <Icon icon="mi:external-link" inline={true} />
+            {data.links.map((link) => {
+              return (
+                <React.Fragment key={link.id}>
+                  {link.codigo ? (
+                    <Link to={link.url} target="_blank">
+                      <Icon icon="charm:github" inline={true} />
+                    </Link>
+                  ) : (
+                    <Link to={link.url} target="_blank">
+                      <Icon icon="mi:external-link" inline={true} />
+                    </Link>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
         </ItemHead>
         <ItemTitulo>{data.titulo}</ItemTitulo>
         <ItemDescripcion>{data.descripcion}</ItemDescripcion>
         <ItemTecno>
           {data.tecnologias.map((tecnologia) => {
-            return <li>{tecnologia}</li>;
+            return <li key={tecnologia.id}>{tecnologia.nombre}</li>;
           })}
         </ItemTecno>
       </ContenidoItem>
