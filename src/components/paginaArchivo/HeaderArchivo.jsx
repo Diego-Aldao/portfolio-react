@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 const Header = styled.header`
   margin: 120px 0px 50px;
+  max-width: 1200px;
+  margin: 120px auto 50px;
   h1 {
     color: var(--color-fuente-principal);
     font-size: clamp(36px, 7vw, 72px);

@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import archivo from "../../data/proyectos.json";
+import comparar from "../../Utils/comparar";
 
 const Tabla = styled.table`
   width: 100%;
   text-align: left;
   padding-bottom: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 400px);
   th,
   td {
     padding: 10px 10px 10px 0px;
@@ -29,14 +33,15 @@ const Tech = styled.th`
 `;
 
 const ListaTech = styled.td`
-  display: none;
   font-size: 12px;
   font-family: var(--fuente-mono);
+  display: none;
   span {
     display: inline-block;
   }
+  align-items: center;
   @media (min-width: 768px) {
-    display: inline-block;
+    display: table-cell;
   }
 `;
 const Separador = styled.span`
@@ -64,7 +69,12 @@ const Icono = styled(Icon)`
 const TablaArchivo = () => {
   let { data } = archivo;
 
-  const [listaArchivo, setListaArchivo] = useState(data);
+  const [listaArchivo, setListaArchivo] = useState([]);
+
+  useEffect(() => {
+    let ordenados = data.sort(comparar);
+    setListaArchivo(ordenados);
+  }, []);
 
   return (
     <Tabla>
@@ -93,8 +103,17 @@ const TablaArchivo = () => {
                 })}
               </ListaTech>
               <td>
-                <Icono icon="mi:external-link" inline={true} />
-                <Icono icon="charm:github" inline={true} />
+                {item.links.map((link) => {
+                  return (
+                    <a href={link.url} target="_blank" key={link.id}>
+                      {link.codigo ? (
+                        <Icono icon="charm:github" inline={true} />
+                      ) : (
+                        <Icono icon="mi:external-link" inline={true} />
+                      )}
+                    </a>
+                  );
+                })}
               </td>
             </tr>
           );
