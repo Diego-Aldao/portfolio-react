@@ -63,12 +63,12 @@ const About = ({ setCurrentSection }) => {
       <Descripcion>
         <p ref={ref}>
           ¡Hola! soy Diego, un desarrollador jr. viviendo en Mendoza, Arg. Tengo
-          formacion y comprension solida de los conceptos fundamentales del
-          desarrollo web, como <span>html</span>, <span>css</span> y{" "}
-          <span>javascript</span>. Ademas, tengo experiencia en el desarrollo de
-          aplicaciones utilizando <span>react</span> y he desarrollado proyectos
+          formación y comprension solida de los conceptos fundamentales del
+          desarrollo web, como <span>Html</span>, <span>Css</span> y{" "}
+          <span>JavaScript</span>. Además, tengo experiencia en el desarrollo de
+          aplicaciones utilizando <span>React</span> y he desarrollado proyectos
           que involucran la construccion de componentes, la gestion del estado y
-          la integracion de <span>APIs</span>
+          la integración de <span>APIs</span>
         </p>
         <p>
           Estas son las tecnologías y herramientas con las que he trabajado
@@ -100,12 +100,12 @@ const About = ({ setCurrentSection }) => {
             <Icon icon="tabler:brand-firebase" />
           </li>
           <li>
-            <p>css</p>
-            <Icon icon="tabler:brand-css3" />
+            <p>react-router</p>
+            <Icon icon="logos:react-router" />
           </li>
           <li>
-            <p>html</p>
-            <Icon icon="tabler:brand-html5" />
+            <p>vite</p>
+            <Icon icon="tabler:brand-vite" />
           </li>
           <li>
             <p>javascript</p>
