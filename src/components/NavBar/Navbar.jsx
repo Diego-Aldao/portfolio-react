@@ -2,6 +2,7 @@ import styled from "styled-components";
 import LinkNavbar from "./ItemNavbar";
 import ModoOscuro from "./ModoOscuro";
 import logo from "../../images/logo.png";
+import { Link } from "react-router-dom";
 
 const Navegacion = styled.nav`
   width: 100%;
@@ -27,7 +28,7 @@ const Contenido = styled.div`
   margin: 0 auto;
   height: 100%;
 `;
-const Logo = styled.span`
+const Logo = styled(Link)`
   width: 50px;
   height: 50px;
   color: var(--color-principal);
@@ -70,7 +71,7 @@ const Navbar = ({ currentSection }) => {
   return (
     <Navegacion>
       <Contenido>
-        <Logo>
+        <Logo to="/">
           <img src={logo} alt="" />
         </Logo>
         <NavLinks currentSection={currentSection}>
