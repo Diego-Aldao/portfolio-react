@@ -32,7 +32,7 @@ const LinkNavbar = ({ currentSection, clase }) => {
 
   const handleLocation = (destino) => {
     if (location.pathname == "/archivo") {
-      navigate(`${destino}`);
+      navigate(`/#${destino}`);
     }
   };
   return (
