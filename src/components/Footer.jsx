@@ -1,21 +1,50 @@
 import styled from "styled-components";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const Contenido = styled.footer`
   width: 100%;
-  padding: 15px 0px;
+  padding: 15px 0px 60px;
+  @media (min-width: 768px) {
+    padding: 15px 0px;
+  }
 `;
 
 const Links = styled.ul`
   display: flex;
+  max-width: 500px;
   justify-content: space-between;
-  max-width: 270px;
   margin: 0px auto 30px;
+  li {
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 15px;
+    height: 15px;
+  }
   a {
-    padding: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 5px;
+    text-transform: capitalize;
   }
   a:hover {
     color: var(--color-principal);
+  }
+  @media (min-width: 768px) {
+    a {
+      padding: 5px;
+      font-size: 14px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 const Nombre = styled.p`
@@ -33,23 +62,26 @@ const Footer = () => {
     <Contenido>
       <Links>
         <li>
-          <a href="">
+          <Link to="mailto:diego_ind@live.com.ar">
+            correo
             <Icon icon="fluent:mail-16-regular" inline={true} />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
+          <Link to="https://github.com/Diego-Aldao">
+            github
             <Icon icon="charm:github" inline={true} />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="">
-            <Icon icon="akar-icons:linkedin-fill" inline={true} />
-          </a>
+          <Link to="https://www.linkedin.com/in/diego-aldao">
+            linkedin
+            <Icon icon="akar-icons:linkedin-fill" />
+          </Link>
         </li>
       </Links>
       <Nombre>
-        hecho por <a href="">diego aldao</a>
+        hecho por <Link to="https://github.com/Diego-Aldao">diego aldao</Link>
       </Nombre>
     </Contenido>
   );
