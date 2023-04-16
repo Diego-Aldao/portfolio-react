@@ -81,7 +81,10 @@ const Footer = () => {
         </li>
       </Links>
       <Nombre>
-        hecho por <Link to="https://github.com/Diego-Aldao">diego aldao</Link>
+        hecho por{" "}
+        <Link to="https://github.com/Diego-Aldao" target="_blank">
+          diego aldao
+        </Link>
       </Nombre>
     </Contenido>
   );
