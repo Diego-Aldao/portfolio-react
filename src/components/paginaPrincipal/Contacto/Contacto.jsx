@@ -1,10 +1,44 @@
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Contenedor = styled.section`
   padding: 60px 0px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  p {
+    span {
+      color: var(--color-principal);
+    }
+  }
+  a {
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: var(--fuente-mono);
+    line-height: 1;
+    cursor: pointer;
+    padding: 15px 10px;
+    margin: 40px auto 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0000;
+    text-transform: capitalize;
+    transition: var(--transition);
+    max-width: 130px;
+    &:hover {
+      color: var(--color-bg-secundario);
+      background: var(--color-principal);
+    }
+    @media (min-width: 768px) {
+      max-width: 160px;
+      font-size: 14px;
+    }
+  }
 `;
 
 const Header = styled.header`
@@ -31,39 +65,28 @@ const Titulo = styled.h2`
   text-align: center;
   margin-bottom: 20px;
 `;
-const Boton = styled.button`
-  color: var(--color-principal);
-  border: 1px solid var(--color-principal);
-  border-radius: 4px;
-  font-size: 15px;
-  font-family: var(--fuente-mono);
-  line-height: 1;
-  cursor: pointer;
-  padding: 1.25rem 1.75rem;
-  margin: 40px auto 0px;
-  display: block;
-  background: #0000;
-  text-transform: capitalize;
-  transition: var(--transition);
-  &:hover {
-    color: var(--color-bg-secundario);
-    background: var(--color-principal);
-  }
-`;
 
-const Contacto = () => {
+const Contacto = ({ setCurrentSection }) => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) setCurrentSection("contacto");
+  }, [inView]);
   return (
-    <Contenedor>
-      <Header>
+    <Contenedor id="contacto">
+      <Header ref={ref}>
         <h2>contacto</h2>
       </Header>
       <Titulo>trabajemos juntos</Titulo>
       <p>
-        Although I’m not currently looking for any new opportunities, my inbox
-        is always open. Whether you have a question or just want to say hi, I’ll
-        try my best to get back to you!
+        Actualmente estoy buscando oportunidades para <span>aprender</span>,{" "}
+        <span>crecer</span> como profesional y <span>aportar</span> el máximo
+        valor posible. Estoy interesado en cualquier tecnología y en cualquier
+        proyecto que me permita desarrollar mis habilidades y conocimientos.
       </p>
-      <Boton>contactarme</Boton>
+      <Link to="mailto:diego_ind@live.com.ar">contactarme</Link>
     </Contenedor>
   );
 };
