@@ -1,21 +1,35 @@
-import React from "react";
-import About from "../components/paginaPrincipal/About";
-import Archivo from "../components/paginaPrincipal/Archivo/Archivo";
-import Contacto from "../components/paginaPrincipal/Contacto";
-import Cursos from "../components/paginaPrincipal/Cursos/Cursos";
-import Header from "../components/paginaPrincipal/Header";
+import React, { useState, Suspense, lazy } from "react";
+import About from "../components/paginaPrincipal/About/About";
+import Header from "../components/paginaPrincipal/Header/Header";
+const Cursos = lazy(() =>
+  import("../components/paginaPrincipal/Cursos/Cursos")
+);
+const Proyectos = lazy(() =>
+  import("../components/paginaPrincipal/Proyectos/Proyectos")
+);
+const Archivo = lazy(() =>
+  import("../components/paginaPrincipal/Archivo/Archivo")
+);
+const Contacto = lazy(() =>
+  import("../components/paginaPrincipal/Contacto/Contacto")
+);
 import Layout from "../layouts/Layout";
-import Proyectos from "../components/paginaPrincipal/Proyectos/Proyectos";
+import NavBarMobile from "../components/NavBar/NavMovil/NavbarMovil";
 
 const PaginaIndex = () => {
+  const [currentSection, setCurrentSection] = useState("");
   return (
-    <Layout>
-      <Header />
-      <About />
-      <Cursos />
-      <Proyectos />
-      <Archivo />
-      <Contacto />
+    <Layout currentSection={currentSection}>
+      <Header setCurrentSection={setCurrentSection} />
+      <About setCurrentSection={setCurrentSection} />
+
+      <Suspense fallback={<></>}>
+        <Cursos setCurrentSection={setCurrentSection} />
+        <Proyectos setCurrentSection={setCurrentSection} />
+        <Archivo setCurrentSection={setCurrentSection} />
+        <Contacto setCurrentSection={setCurrentSection} />
+      </Suspense>
+      <NavBarMobile currentSection={currentSection} />
     </Layout>
   );
 };
