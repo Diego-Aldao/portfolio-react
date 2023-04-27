@@ -89,7 +89,7 @@ const DescripcionProyecto = styled.div`
   @media (min-width: 768px) {
     margin-bottom: 0px;
     padding: ${({ imagen }) =>
-      imagen ? "10px 5px 10px 0px" : "10px 0px 10px 10px"};
+      imagen ? "10px 5px 10px 0px" : "10px 0px 10px 5px"};
   }
 `;
 
@@ -186,7 +186,7 @@ const ContenidoProyecto = styled.div`
     }
   }
   @media (min-width: 1080px) {
-    grid-column: ${({ imagen }) => (imagen ? "1 / 7" : "7 / 13")};
+    grid-column: ${({ imagen }) => (imagen ? "1 / 8" : "6 / 13")};
   }
 `;
 
