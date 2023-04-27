@@ -488,22 +488,22 @@
     },
     {
       "id": 15,
-      "titulo": "asos",
+      "titulo": "akira",
       "principal": true,
       "año": 2023,
-      "descripcion": "asos es un template para un sitio de una empresa de diseño interior que necesite una forma facil, eficaz y atractiva de compartir su trabajo",
+      "descripcion": "Akira es un sitio web ecommerce que, a traves de llamadas a una api, permite la visualizacion de productos y la interaccion con los mismos. Contiene búsqueda, filtro y detalle de productos, login, carrito, etc.",
       "tipo": "ecommerce",
       "imagenEnd": true,
-      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.jpg?alt=media&token=e107a447-96c7-4451-9f2a-744be187c9e0",
+      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/akira-ecommerce.appspot.com/o/screenshots%2Finicio.png?alt=media&token=962f8fcb-2d99-4723-b776-86192e67442a",
       "links": [
         {
           "id": 1,
-          "url": "https://designecho.netlify.app/",
+          "url": "https://akira-ecommerce.web.app/",
           "codigo": false
         },
         {
           "id": 2,
-          "url": "https://github.com/Diego-Aldao/echo",
+          "url": "https://github.com/Diego-Aldao/ecommerce",
           "codigo": true
         }
       ],
@@ -522,7 +522,7 @@
         },
         {
           "id": 4,
-          "nombre": "yup"
+          "nombre": "axios"
         },
         {
           "id": 5,
@@ -566,7 +566,7 @@
         },
         {
           "id": 4,
-          "nombre": "yup"
+          "nombre": "react-router"
         }
       ]
     },
