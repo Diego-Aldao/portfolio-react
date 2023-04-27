@@ -73,7 +73,7 @@
       "institucion": "victor robles",
       "fechaInicio": "mar 2022",
       "fechaFin": "abr 2022",
-      "descripcion": "Curso de introducción a react en la plataforma Udemy donde aprendí lo básico de la librería, como su instalación, qué es jsx, qué son los componentes, y la estructura basica de un proyecto en react",
+      "descripcion": "Curso de introducción a react en la plataforma Udemy, donde aprendí lo básico de la librería, como su instalación, qué es jsx, qué son los componentes, y la estructura básica de un proyecto en React.",
       "tecnologias": [
         {
           "id": 1,
@@ -87,7 +87,7 @@
       "institucion": "bob ziroll",
       "fechaInicio": " mar 2022",
       "fechaFin": "abr 2022",
-      "descripcion": "Curso de react en la plataforma Scrimba donde continué el aprendizaje de la libreria, aprendiendo sobre hooks, props, formularios y llamadas de API en react",
+      "descripcion": "Curso de React en la plataforma Scrimba, donde continué el aprendizaje de la librería, aprendiendo sobre hooks, props, formularios y llamadas de API en React.",
       "tecnologias": [
         {
           "id": 1,

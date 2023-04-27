@@ -166,7 +166,7 @@
       "id": 6,
       "titulo": "arcoiris",
       "año": 2021,
-      "descripcion": "sitio web para un jardin de niños",
+      "descripcion": "sitio web para un jardín de niños",
       "links": [
         {
           "id": 1,
@@ -334,7 +334,7 @@
       "id": 11,
       "titulo": "modern arquitectura",
       "año": 2021,
-      "descripcion": "sitio para una empresa de arquitectura, con una galeria, blog y seccion de noticias.",
+      "descripcion": "sitio para una empresa de arquitectura, con una galería, blog y seccion de noticias.",
       "links": [
         {
           "id": 1,
@@ -491,7 +491,7 @@
       "titulo": "akira",
       "principal": true,
       "año": 2023,
-      "descripcion": "Akira es un sitio web ecommerce que, a traves de llamadas a una api, permite la visualizacion de productos y la interaccion con los mismos. Contiene búsqueda, filtro y detalle de productos, login, carrito, etc.",
+      "descripcion": "Akira es un sitio web ecommerce que, a traves de llamadas a una api, permite la visualización de productos y la interacción con los mismos. Contiene búsqueda, filtro y detalle de productos, login, carrito, etc.",
       "tipo": "ecommerce",
       "imagenEnd": true,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/akira-ecommerce.appspot.com/o/screenshots%2Finicio.png?alt=media&token=962f8fcb-2d99-4723-b776-86192e67442a",
@@ -535,7 +535,7 @@
       "titulo": "echo",
       "principal": true,
       "año": 2022,
-      "descripcion": "echo es un template para un sitio de una empresa de diseño interior que necesite una forma facil, eficaz y atractiva de compartir su trabajo, contiene un formulario de contacto, blog y galerias",
+      "descripcion": "echo es un template para una empresa de diseño interior que necesite un sitio web que permita compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
       "tipo": "sitio de negocio",
       "imagenEnd": false,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.jpg?alt=media&token=e107a447-96c7-4451-9f2a-744be187c9e0",
@@ -575,7 +575,7 @@
       "titulo": "covid-19 data",
       "principal": true,
       "año": 2022,
-      "descripcion": "covid-19 data es un proyecto que combina una api junto a un mapa interactivo para hacer una exposición de los datos de covid a nivel mundial",
+      "descripcion": "covid-19 data es un proyecto que combina una api junto a un mapa interactivo para hacer una exposición de los datos de covid a nivel mundial.",
       "tipo": "sitio educativo",
       "imagenEnd": true,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fcovid.webp?alt=media&token=b567856f-e37e-4f28-9dca-85b4abdc7790",
