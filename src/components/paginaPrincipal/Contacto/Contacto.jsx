@@ -86,7 +86,7 @@ const Contacto = ({ setCurrentSection }) => {
         valor posible. Estoy interesado en cualquier tecnología y en cualquier
         proyecto que me permita desarrollar mis habilidades y conocimientos.
       </p>
-      <Link to="mailto:diego_ind@live.com.ar">contactarme</Link>
+      <Link to="mailto:diegofrontdev@gmail.com">contactarme</Link>
     </Contenedor>
   );
 };

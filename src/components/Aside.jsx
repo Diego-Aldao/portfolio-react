@@ -98,7 +98,7 @@ const Aside = () => {
         </ListaSocial>
       </Social>
       <Email>
-        <a href="mailto:diego_ind@live.com.ar">diego_ind@live.com.ar</a>
+        <a href="mailto:diegofrontdev@gmail.com">diegofrontdev@gmail.com</a>
       </Email>
     </>
   );

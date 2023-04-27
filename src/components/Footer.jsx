@@ -62,7 +62,7 @@ const Footer = () => {
     <Contenido>
       <Links>
         <li>
-          <Link to="mailto:diego_ind@live.com.ar">
+          <Link to="mailto:diegofrontdev@gmail.com">
             correo
             <Icon icon="fluent:mail-16-regular" inline={true} />
           </Link>

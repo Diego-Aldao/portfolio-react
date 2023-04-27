@@ -159,7 +159,7 @@ const Header = ({ setCurrentSection }) => {
           <Link to="/DiegoAldao_CV.pdf" target="_blank" className="lleno">
             curriculum <Icon icon="ph:file-text-bold" />
           </Link>
-          <Link to="mailto:diego_ind@live.com.ar">
+          <Link to="mailto:diegofrontdev@gmail.com">
             contactarme <Icon icon="ph:chat-text-light" />
           </Link>
         </ContenedorBotones>
