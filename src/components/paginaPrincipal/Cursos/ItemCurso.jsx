@@ -75,7 +75,7 @@ const ItemCurso = ({ curso, style }) => {
           <ul>
             <li>{curso.descripcion}</li>
             <Tecnologias>
-              <p>tecnologias:</p>{" "}
+              <p>tecnologías:</p>{" "}
               {curso.tecnologias.map((tecnologia) => {
                 return <span key={tecnologia.id}> {tecnologia.nombre}</span>;
               })}
