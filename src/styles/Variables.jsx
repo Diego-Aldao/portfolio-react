@@ -5,13 +5,13 @@ const Variables = css`
     --color-principal: #8035e5;
     --color-bg-principal: #e6e6e6;
     --color-bg-secundario: #dddddd;
-    --color-fuente-principal: #001d28;
+    --color-fuente-principal: #0a0a0a;
     --color-fuente-secundario: #555555;
     --color-fuente-terciario: #747474;
   }
   .dark-mode {
-    --color-bg-principal: #001d28;
-    --color-bg-secundario: #333333;
+    --color-bg-principal: #0a0a0a;
+    --color-bg-secundario: #292929;
     --color-fuente-principal: #e6e6e6;
     --color-fuente-secundario: #cacaca;
     --color-fuente-terciario: #bdbdbd;
