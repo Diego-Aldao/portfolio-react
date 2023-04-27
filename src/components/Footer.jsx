@@ -68,13 +68,13 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link to="https://github.com/Diego-Aldao">
+          <Link to="https://github.com/Diego-Aldao" target="_blank">
             github
             <Icon icon="charm:github" inline={true} />
           </Link>
         </li>
         <li>
-          <Link to="https://www.linkedin.com/in/diego-aldao">
+          <Link to="https://www.linkedin.com/in/diego-aldao" target="_blank">
             linkedin
             <Icon icon="akar-icons:linkedin-fill" />
           </Link>
