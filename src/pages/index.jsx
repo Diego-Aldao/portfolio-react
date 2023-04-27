@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { useState, Suspense, lazy, useEffect } from "react";
 import About from "../components/paginaPrincipal/About/About";
 import Header from "../components/paginaPrincipal/Header/Header";
 const Cursos = lazy(() =>
@@ -18,6 +18,11 @@ import NavBarMobile from "../components/NavBar/NavMovil/NavbarMovil";
 
 const PaginaIndex = () => {
   const [currentSection, setCurrentSection] = useState("");
+
+  useEffect(() => {
+    document.title = "Diego Frontend Jr.";
+  }, []);
+
   return (
     <Layout currentSection={currentSection}>
       <Header setCurrentSection={setCurrentSection} />
