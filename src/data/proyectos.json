@@ -532,12 +532,52 @@
     },
     {
       "id": 16,
+      "titulo": "movieVerse",
+      "principal": true,
+      "año": 2023,
+      "descripcion": "movieVerse es un sitio web que ofrece una extensa base de datos de películas, programas de televisión y celebridades. Permite a los usuarios buscar dentro de esos 3 parametros, ver estrenos, tendencias, detalles y guardar o agregar a favoritos.",
+      "tipo": "sitio dase de datos",
+      "imagenEnd": false,
+      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2FmovieVerse.webp?alt=media&token=80ff3064-24ac-4521-86ed-836aecba3a41",
+      "links": [
+        {
+          "id": 1,
+          "url": "https://movieverse-db.netlify.app/",
+          "codigo": false
+        },
+        {
+          "id": 2,
+          "url": "https://github.com/Diego-Aldao/movies-db",
+          "codigo": true
+        }
+      ],
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "the movie database API"
+        },
+        {
+          "id": 4,
+          "nombre": "react-router"
+        }
+      ]
+    },
+    {
+      "id": 17,
       "titulo": "echo",
       "principal": true,
       "año": 2022,
       "descripcion": "echo es un template para una empresa de diseño interior que necesite un sitio web que permita compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
       "tipo": "sitio de negocio",
-      "imagenEnd": false,
+      "imagenEnd": true,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.jpg?alt=media&token=e107a447-96c7-4451-9f2a-744be187c9e0",
       "links": [
         {
@@ -571,13 +611,13 @@
       ]
     },
     {
-      "id": 17,
+      "id": 18,
       "titulo": "covid-19 data",
       "principal": true,
       "año": 2022,
       "descripcion": "covid-19 data es un proyecto que combina una api junto a un mapa interactivo para hacer una exposición de los datos de covid a nivel mundial.",
       "tipo": "sitio educativo",
-      "imagenEnd": true,
+      "imagenEnd": false,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fcovid.webp?alt=media&token=b567856f-e37e-4f28-9dca-85b4abdc7790",
       "links": [
         {
