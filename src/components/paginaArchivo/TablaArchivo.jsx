@@ -14,7 +14,7 @@ const Tabla = styled.table`
   min-height: calc(100vh - 400px);
   th,
   td {
-    padding: 10px 10px 10px 0px;
+    padding: 10px;
     text-transform: capitalize;
   }
   th {
@@ -57,12 +57,28 @@ const Titulo = styled.td`
   font-weight: 600;
 `;
 
-const Icono = styled(Icon)`
-  height: 22px;
-  width: 22px;
-  margin-right: 5px;
-  &:hover {
-    color: var(--color-principal);
+const Links = styled.td`
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  svg {
+    height: 14px;
+    width: 14px;
+    &:hover {
+      color: var(--color-principal);
+    }
+  }
+  @media (min-width: 768px) {
+    svg {
+      height: 17px;
+      width: 17px;
+    }
+  }
+  @media (min-width: 1024px) {
+    svg {
+      height: 22px;
+      width: 22px;
+    }
   }
 `;
 
@@ -83,7 +99,7 @@ const TablaArchivo = () => {
           <th>año</th>
           <th>titulo</th>
           <Tech>construido con</Tech>
-          <th>link</th>
+          <th>links</th>
         </tr>
       </thead>
       <tbody>
@@ -102,19 +118,19 @@ const TablaArchivo = () => {
                   );
                 })}
               </ListaTech>
-              <td>
+              <Links>
                 {item.links.map((link) => {
                   return (
                     <a href={link.url} target="_blank" key={link.id}>
                       {link.codigo ? (
-                        <Icono icon="charm:github" inline={true} />
+                        <Icon icon="charm:github" inline={true} />
                       ) : (
-                        <Icono icon="mi:external-link" inline={true} />
+                        <Icon icon="mi:external-link" inline={true} />
                       )}
                     </a>
                   );
                 })}
-              </td>
+              </Links>
             </tr>
           );
         })}
