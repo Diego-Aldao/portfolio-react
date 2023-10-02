@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import avatar from "../../../images/avatar.png";
+import avatar from "../../../assets/avatar.webp";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { Icon } from "@iconify/react";

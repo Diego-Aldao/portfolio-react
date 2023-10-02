@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import LinkNavbar from "./ItemNavbar";
 import ModoOscuro from "./ModoOscuro";
-import logo from "../../images/logo.png";
+import logo from "../../assets/logo.webp";
 import { Link } from "react-router-dom";
 
 const Navegacion = styled.nav`
