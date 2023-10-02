@@ -5,78 +5,6 @@
   "descripcion": "En esta sección compartiré los últimos proyectos que he realizado, incluyendo, para cada uno de ellos, una breve descripción, las tecnologías utilizadas y los links hacia el código y los sitios en vivo",
   "data": [
     {
-      "id": 6,
-      "titulo": "arcoiris",
-      "año": 2021,
-      "descripcion": "sitio web para un jardín de niños",
-      "links": [
-        {
-          "id": 1,
-          "url": "https://arcoiriskids.netlify.app/",
-          "codigo": false
-        },
-        {
-          "id": 2,
-          "url": "https://github.com/Diego-Aldao/escuela-primaria",
-          "codigo": true
-        }
-      ],
-      "tecnologias": [
-        {
-          "id": 1,
-          "nombre": "html"
-        },
-        {
-          "id": 2,
-          "nombre": "sass"
-        },
-        {
-          "id": 3,
-          "nombre": "javascript"
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "titulo": "echo",
-      "principal": true,
-      "año": 2022,
-      "descripcion": "echo es un template para una empresa de diseño interior que necesite un sitio web que permita compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
-      "tipo": "sitio de negocio",
-      "imagenEnd": false,
-      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.webp?alt=media&token=4ea8a1ce-e5b9-4cc0-8b53-e855ccadc8b8&_gl=1*1rq96gi*_ga*MTgzMzI3NDAwOC4xNjk1Mzk0MDI0*_ga_CW55HF8NVT*MTY5NjI3MzQyOC4yLjEuMTY5NjI3MzcwNi4xMi4wLjA.",
-      "links": [
-        {
-          "id": 1,
-          "url": "https://designecho.netlify.app/",
-          "codigo": false
-        },
-        {
-          "id": 2,
-          "url": "https://github.com/Diego-Aldao/echo",
-          "codigo": true
-        }
-      ],
-      "tecnologias": [
-        {
-          "id": 1,
-          "nombre": "react"
-        },
-        {
-          "id": 2,
-          "nombre": "styled-components"
-        },
-        {
-          "id": 3,
-          "nombre": "formik"
-        },
-        {
-          "id": 4,
-          "nombre": "react-router"
-        }
-      ]
-    },
-    {
       "id": 1,
       "titulo": "api banderas",
       "año": 2022,
@@ -84,11 +12,6 @@
       "links": [
         {
           "id": 1,
-          "url": "https://rest-paises-api.netlify.app/",
-          "codigo": false
-        },
-        {
-          "id": 2,
           "url": "https://github.com/Diego-Aldao/api-banderas",
           "codigo": true
         }
@@ -235,7 +158,39 @@
       ]
     },
     {
-      "id": 21,
+      "id": 6,
+      "titulo": "arcoiris",
+      "año": 2021,
+      "descripcion": "sitio web para un jardín de niños",
+      "links": [
+        {
+          "id": 1,
+          "url": "https://arcoiriskids.netlify.app/",
+          "codigo": false
+        },
+        {
+          "id": 2,
+          "url": "https://github.com/Diego-Aldao/escuela-primaria",
+          "codigo": true
+        }
+      ],
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "html"
+        },
+        {
+          "id": 2,
+          "nombre": "sass"
+        },
+        {
+          "id": 3,
+          "nombre": "javascript"
+        }
+      ]
+    },
+    {
+      "id": 22,
       "titulo": "covid-19 data",
       "año": 2022,
       "descripcion": "covid-19 data es un proyecto que combina una api junto a un mapa interactivo para hacer una exposición de los datos de covid a nivel mundial.",
@@ -670,46 +625,6 @@
       ]
     },
     {
-      "id": 18,
-      "titulo": "movieVerse",
-      "principal": true,
-      "año": 2023,
-      "descripcion": "movieVerse es un sitio web que ofrece una extensa base de datos de películas, programas de televisión y celebridades. Permite a los usuarios buscar dentro de esos 3 parametros, ver estrenos, tendencias, detalles y guardar o agregar a favoritos.",
-      "tipo": "sitio dase de datos",
-      "imagenEnd": true,
-      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fmovieverse.webp?alt=media&token=b2f2c73d-290b-4622-ac69-03ef329ee00c",
-      "links": [
-        {
-          "id": 1,
-          "url": "https://movieverse-db.netlify.app/",
-          "codigo": false
-        },
-        {
-          "id": 2,
-          "url": "https://github.com/Diego-Aldao/movies-db",
-          "codigo": true
-        }
-      ],
-      "tecnologias": [
-        {
-          "id": 1,
-          "nombre": "react"
-        },
-        {
-          "id": 2,
-          "nombre": "styled-components"
-        },
-        {
-          "id": 3,
-          "nombre": "the movie database API"
-        },
-        {
-          "id": 4,
-          "nombre": "react-router"
-        }
-      ]
-    },
-    {
       "id": 19,
       "titulo": "akira",
       "principal": true,
@@ -749,6 +664,87 @@
         },
         {
           "id": 5,
+          "nombre": "react-router"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "titulo": "movieVerse",
+      "principal": true,
+      "año": 2023,
+      "descripcion": "movieVerse es un sitio web que ofrece una extensa base de datos de películas, programas de televisión y celebridades. Permite a los usuarios buscar dentro de esos 3 parametros, ver estrenos, tendencias, detalles y guardar o agregar a favoritos.",
+      "tipo": "sitio dase de datos",
+      "imagenEnd": false,
+      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fmovieverse.webp?alt=media&token=b2f2c73d-290b-4622-ac69-03ef329ee00c",
+      "links": [
+        {
+          "id": 1,
+          "url": "https://movieverse-db.netlify.app/",
+          "codigo": false
+        },
+        {
+          "id": 2,
+          "url": "https://github.com/Diego-Aldao/movies-db",
+          "codigo": true
+        }
+      ],
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "the movie database API"
+        },
+        {
+          "id": 4,
+          "nombre": "react-router"
+        }
+      ]
+    },
+
+    {
+      "id": 20,
+      "titulo": "echo",
+      "principal": true,
+      "año": 2022,
+      "descripcion": "echo es un template para una empresa de diseño interior que necesite un sitio web que permita compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
+      "tipo": "sitio de negocio",
+      "imagenEnd": true,
+      "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.webp?alt=media&token=4ea8a1ce-e5b9-4cc0-8b53-e855ccadc8b8&_gl=1*1rq96gi*_ga*MTgzMzI3NDAwOC4xNjk1Mzk0MDI0*_ga_CW55HF8NVT*MTY5NjI3MzQyOC4yLjEuMTY5NjI3MzcwNi4xMi4wLjA.",
+      "links": [
+        {
+          "id": 1,
+          "url": "https://designecho.netlify.app/",
+          "codigo": false
+        },
+        {
+          "id": 2,
+          "url": "https://github.com/Diego-Aldao/echo",
+          "codigo": true
+        }
+      ],
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "react"
+        },
+        {
+          "id": 2,
+          "nombre": "styled-components"
+        },
+        {
+          "id": 3,
+          "nombre": "formik"
+        },
+        {
+          "id": 4,
           "nombre": "react-router"
         }
       ]
