@@ -5,6 +5,24 @@
   "cursos": [
     {
       "id": 1,
+      "titulo": "diseño de experiencia de usuario (UX)",
+      "institucion": "google",
+      "fechaInicio": "may 2023",
+      "fechaFin": "oct 2023",
+      "descripcion": "Programa de siete cursos brindados por google sobre diseño UX, donde aprendí sobre las ramas dentro del diseño UX, el ciclo de desarrollo de un producto, cómo aplicar conceptos básicos de UX, y a crear prototipos en programas como Figma o Adobe XD.",
+      "tecnologias": [
+        {
+          "id": 1,
+          "nombre": "figma"
+        },
+        {
+          "id": 2,
+          "nombre": "adobe XD"
+        }
+      ]
+    },
+    {
+      "id": 2,
       "titulo": "#yoProgramo",
       "institucion": "argentina programa",
       "fechaInicio": "mar 2022",
@@ -34,7 +52,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "titulo": "desarrollo fullstack MERN",
       "institucion": "iters",
       "fechaInicio": "ago 2021",
@@ -68,7 +86,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "titulo": "introducción a react",
       "institucion": "victor robles",
       "fechaInicio": "mar 2022",
@@ -82,7 +100,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "titulo": "learn react",
       "institucion": "bob ziroll",
       "fechaInicio": " mar 2022",
