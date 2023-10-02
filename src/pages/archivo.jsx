@@ -7,7 +7,7 @@ import NavMovil from "../components/paginaArchivo/NavMovil";
 const PaginaArchivo = () => {
   useEffect(() => {
     window.scroll(0, 0);
-    document.title = "Diego Frontend Jr. | Archivo";
+    document.title = "Diego Aldao | Archivo";
   }, []);
 
   return (

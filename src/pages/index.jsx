@@ -20,7 +20,7 @@ const PaginaIndex = () => {
   const [currentSection, setCurrentSection] = useState("");
 
   useEffect(() => {
-    document.title = "Diego Frontend Jr.";
+    document.title = "Diego Aldao | Desarrollador Frontend";
   }, []);
 
   return (
