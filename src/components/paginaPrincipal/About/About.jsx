@@ -5,6 +5,57 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Section from "../../Section";
 
+const listadoTectnologias = [
+  {
+    nombre: "react",
+    icono: <Icon icon="akar-icons:react-fill" />,
+  },
+  {
+    nombre: "styled-components",
+    icono: <Icon icon="simple-icons:styledcomponents" />,
+  },
+  {
+    nombre: "github",
+    icono: <Icon icon="ph:github-logo" />,
+  },
+  {
+    nombre: "next.js",
+    icono: <Icon icon="teenyicons:nextjs-outline" />,
+  },
+  {
+    nombre: "node.js",
+    icono: <Icon icon="akar-icons:node-fill" />,
+  },
+  {
+    nombre: "tailwindcss",
+    icono: <Icon icon="teenyicons:tailwind-outline" />,
+  },
+  {
+    nombre: "typeScript",
+    icono: <Icon icon="teenyicons:typescript-outline" />,
+  },
+  {
+    nombre: "vite",
+    icono: <Icon icon="tabler:brand-vite" />,
+  },
+  {
+    nombre: "javaScript",
+    icono: <Icon icon="teenyicons:javascript-outline" />,
+  },
+  {
+    nombre: "vercel",
+    icono: <Icon icon="radix-icons:vercel-logo" />,
+  },
+  {
+    nombre: "figma",
+    icono: <Icon icon="teenyicons:figma-outline" />,
+  },
+  {
+    nombre: "react-router",
+    icono: <Icon icon="simple-icons:reactrouter" />,
+  },
+];
+
 const Descripcion = styled.div`
   span {
     color: var(--color-principal);
@@ -12,30 +63,34 @@ const Descripcion = styled.div`
 `;
 
 const Tecnologias = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 30%));
-  gap: 0px 10px;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0px;
+  gap: 10px;
   margin: 20px 0px 0px;
   overflow: hidden;
   list-style: none;
   li {
+    flex: 1 40%;
     position: relative;
-    margin-bottom: 10px;
+
     padding-left: 15px;
     font-family: var(--fuente-mono);
     text-transform: capitalize;
     display: flex;
+
     justify-content: flex-start;
     align-items: center;
     svg {
       width: 25px;
+      min-width: 25px;
       height: 25px;
-      margin-left: 10px;
+      min-height: 25px;
       color: #8035e5;
+      display: none;
     }
     p {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   li:before {
@@ -45,10 +100,33 @@ const Tecnologias = styled.ul`
     top: 18%;
     color: var(--color-principal);
   }
+
+  @media (min-width: 580px) {
+    li {
+      gap: 10px;
+      svg {
+        display: initial;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    li {
+      flex: 1 30%;
+    }
+  }
+  @media (min-width: 1024px) {
+    li {
+      p {
+        font-size: 14px;
+      }
+      flex: 1 24%;
+    }
+  }
 `;
 
 const About = ({ setCurrentSection }) => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.9,
   });
 
@@ -75,42 +153,12 @@ const About = ({ setCurrentSection }) => {
           últimamente:
         </p>
         <Tecnologias>
-          <li>
-            <p>react</p>
-            <Icon icon="akar-icons:react-fill" />
-          </li>
-          <li>
-            <p>styled-components</p>
-            <Icon icon="simple-icons:styled-components" />
-          </li>
-          <li>
-            <p>github</p>
-            <Icon icon="ph:github-logo" />
-          </li>
-          <li>
-            <p>mongodb</p>
-            <Icon icon="teenyicons:mongodb-outline" />
-          </li>
-          <li>
-            <p>node.js</p>
-            <Icon icon="akar-icons:node-fill" />
-          </li>
-          <li>
-            <p>firebase</p>
-            <Icon icon="tabler:brand-firebase" />
-          </li>
-          <li>
-            <p>react-router</p>
-            <Icon icon="logos:react-router" />
-          </li>
-          <li>
-            <p>vite</p>
-            <Icon icon="tabler:brand-vite" />
-          </li>
-          <li>
-            <p>javascript</p>
-            <Icon icon="teenyicons:javascript-outline" />
-          </li>
+          {listadoTectnologias.map((tecnologia) => (
+            <li>
+              <p>{tecnologia.nombre}</p>
+              {tecnologia.icono}
+            </li>
+          ))}
         </Tecnologias>
       </Descripcion>
     </Section>
