@@ -83,6 +83,10 @@ const ItemTitulo = styled.h3`
 const ItemDescripcion = styled.p`
   color: var(--color-fuente-terciario);
   font-size: 14px;
+  line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 `;
 
 const ItemTecno = styled.ul`

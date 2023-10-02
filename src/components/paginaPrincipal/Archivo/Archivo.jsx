@@ -56,7 +56,11 @@ const Boton = styled.button`
 
 const VerMas = styled(Link)`
   color: var(--color-principal);
-  font-size: 16px;
+  font-size: 14px;
+  margin-top: 10px;
+  @media (min-width: 768px) {
+    margin-top: 0px;
+  }
 `;
 
 const Archivo = () => {

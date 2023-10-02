@@ -20,6 +20,10 @@ const EstilosGlobales = createGlobalStyle`
   padding: 0px;
   box-sizing: border-box;
   }
+  *::selection{
+    color: var(--color-principal);
+    background: var(--color-fuente-principal);
+  }
 
   h1,
   h2,
