@@ -20,6 +20,7 @@ const Contenedor = styled.section`
     font-size: 12px;
     font-family: var(--fuente-mono);
     line-height: 1;
+    font-weight: 500;
     cursor: pointer;
     padding: 15px 10px;
     margin: 40px auto 0px;

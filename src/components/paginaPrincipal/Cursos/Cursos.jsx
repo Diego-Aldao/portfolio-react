@@ -43,6 +43,7 @@ const Lista = styled.div`
 const Boton = styled.button`
   cursor: pointer;
   display: flex;
+  border-radius: 0px 5px 5px 0px;
   justify-content: center;
   align-items: center;
   min-width: 120px;

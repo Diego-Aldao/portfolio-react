@@ -6,6 +6,7 @@ const Curso = styled(animated.div)`
   background: var(--color-bg-secundario);
   padding: 20px;
   align-self: baseline;
+  border-radius: 5px;
   h3 {
     text-transform: capitalize;
     margin-bottom: 7px;
@@ -37,11 +38,9 @@ const Curso = styled(animated.div)`
       left: 0px;
       color: var(--color-principal);
     }
-    p {
-      font-size: 15px;
-    }
+    p,
     span {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
   li:last-child {

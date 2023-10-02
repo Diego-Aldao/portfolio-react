@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Item = styled(animated.div)`
   background-color: var(--color-bg-secundario);
+  border-radius: 5px;
   font-family: var(--fuente-sans);
   position: relative;
   height: 350px;

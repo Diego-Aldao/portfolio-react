@@ -28,7 +28,7 @@ const Links = styled.ul`
   a {
     padding: 5px;
     display: flex;
-    align-items: center;
+    align-items: end;
     font-size: 12px;
     gap: 5px;
     text-transform: capitalize;

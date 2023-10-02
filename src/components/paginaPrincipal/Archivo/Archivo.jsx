@@ -45,6 +45,7 @@ const Boton = styled.button`
   margin: 80px auto 0px;
   display: block;
   background: #0000;
+  font-weight: 500;
   text-transform: capitalize;
   transition: var(--transition);
   &:hover {
