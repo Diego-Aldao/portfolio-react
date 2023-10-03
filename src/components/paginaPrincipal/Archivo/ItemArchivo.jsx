@@ -83,10 +83,17 @@ const ItemTitulo = styled.h3`
 const ItemDescripcion = styled.p`
   color: var(--color-fuente-terciario);
   font-size: 14px;
-  line-clamp: 4;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  span {
+    /*como el p tiene display webkit box, first-letter no funciona, por eso agrego este span */
+    display: inline-block;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
 `;
 
 const ItemTecno = styled.ul`
@@ -145,7 +152,9 @@ const ItemArchivo = ({ data, style }) => {
           </div>
         </ItemHead>
         <ItemTitulo>{data.titulo}</ItemTitulo>
-        <ItemDescripcion>{data.descripcion}</ItemDescripcion>
+        <ItemDescripcion>
+          <span>{data.descripcion}</span>
+        </ItemDescripcion>
         <ItemTecno>
           {data.tecnologias.map((tecnologia) => {
             return <li key={tecnologia.id}>{tecnologia.nombre}</li>;
