@@ -84,7 +84,7 @@ const Boton = styled.button`
 `;
 
 const Cursos = ({ setCurrentSection }) => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.3,
   });
   const [listaCursos, setListaCursos] = useState(cursos);

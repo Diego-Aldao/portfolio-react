@@ -74,7 +74,7 @@ const Descripcion = styled.p`
   color: var(--color-fuente-secundario);
   font-size: clamp(16px, 2vw, 18px);
   max-width: 540px;
-  margin-bottom: 30px !important;
+  margin-bottom: 20px !important;
   span {
     text-transform: capitalize;
     color: var(--color-principal);
@@ -129,7 +129,7 @@ const ContenedorBotones = styled.div`
 `;
 
 const Header = ({ setCurrentSection }) => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
   });
 
@@ -142,8 +142,8 @@ const Header = ({ setCurrentSection }) => {
       <div className="destino" id="inicio"></div>
       <div className="info">
         <MiniTexto ref={ref}>hola, mi nombre es</MiniTexto>
-        <Titulo>diego aldao.</Titulo>
-        <Titulo subtitulo>desarrollador frontend jr.</Titulo>
+        <Titulo>diego aldao</Titulo>
+        <Titulo subtitulo>desarrollador frontend</Titulo>
         <Descripcion>
           Desarrollador junior apasionado por el desarrollo web y, en
           particular, por la construcción de interfaces de usuario interactivas

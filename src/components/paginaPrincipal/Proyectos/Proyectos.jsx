@@ -23,6 +23,7 @@ const Proyectos = ({ setCurrentSection }) => {
     const finalData = { nombre, descripcion, proyectosFiltrados };
     setProyectosPrincipales(finalData);
   }, []);
+
   return (
     <Section id={"proyectos"}>
       <Header
