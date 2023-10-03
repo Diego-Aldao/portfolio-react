@@ -64,7 +64,7 @@ const VerMas = styled(Link)`
 `;
 
 const Archivo = () => {
-  const [listaArchivo, setListaArchivo] = useState(archivo.data);
+  const [listaArchivo, setListaArchivo] = useState();
   const [maxLista, setMaxLista] = useState(3);
   const [toggle, setToggle] = useState(false);
 
@@ -81,10 +81,15 @@ const Archivo = () => {
     from: { opacity: 0, left: 50, top: 50 },
   });
 
-  useEffect(() => {
+  const filtrarProyectos = () => {
+    let filtrados = archivo.data.filter((item) => item.principal !== true);
     //Necesito cambiar el tamaño de la data para mostrar la cantidad necesaria, a veces 3 a veces 6
-    const listaFormateada = archivo.data.slice(0, maxLista);
+    const listaFormateada = filtrados.slice(0, maxLista);
     setListaArchivo(listaFormateada);
+  };
+
+  useEffect(() => {
+    filtrarProyectos();
   }, [maxLista]);
 
   const handleClick = () => {
@@ -93,8 +98,7 @@ const Archivo = () => {
   };
 
   useEffect(() => {
-    let filtrados = listaArchivo.filter((item) => item.principal !== true);
-    setListaArchivo(filtrados);
+    filtrarProyectos();
   }, []);
 
   return (
@@ -105,9 +109,9 @@ const Archivo = () => {
         </h2>
       </Header>
       <ListaArchivo style={springs}>
-        {listaArchivo.map((item) => {
+        {listaArchivo?.map((item, index) => {
           return (
-            <ItemArchivo key={item.id} style={trail[item.id - 1]} data={item} />
+            <ItemArchivo key={item.id} style={trail[index - 1]} data={item} />
           );
         })}
       </ListaArchivo>
