@@ -9,7 +9,7 @@
       "institucion": "google",
       "fechaInicio": "may 2023",
       "fechaFin": "oct 2023",
-      "descripcion": "Programa de siete cursos brindados por google sobre diseño UX, donde aprendí sobre las ramas dentro del diseño UX, el ciclo de desarrollo de un producto, cómo aplicar conceptos básicos de UX, y a crear prototipos en programas como Figma o Adobe XD.",
+      "descripcion": "Programa de siete cursos brindados por Google sobre diseño UX, donde aprendí sobre las ramas dentro del diseño UX, el ciclo de desarrollo de un producto, cómo aplicar conceptos básicos de UX, y a crear prototipos en programas como Figma o Adobe XD.",
       "tecnologias": [
         {
           "id": 1,
@@ -27,7 +27,7 @@
       "institucion": "argentina programa",
       "fechaInicio": "mar 2022",
       "fechaFin": "oct 2022",
-      "descripcion": "Segunda etapa de argentina programa, donde aprendí sobre SCRUM(roles, artefactos, eventos), Github(repositorios, branchs, commit), frontend dinámico con Angular(componentes, modules, services), backend con Java(OOP, JVM, herencia, poliformismo) y bases de datos con MySql (tablas, índices, consultas).",
+      "descripcion": "Segunda etapa de Argentina Programa, donde aprendí sobre SCRUM(roles, artefactos, eventos), Github(repositorios, branchs, commit), frontend dinámico con Angular(components, modules, services), backend con Java(OOP, JVM, herencia, polimorfismo) y bases de datos con MySql (tablas, índices, consultas).",
       "tecnologias": [
         {
           "id": 1,
@@ -57,7 +57,7 @@
       "institucion": "iters",
       "fechaInicio": "ago 2021",
       "fechaFin": "feb 2022",
-      "descripcion": "Conceptos básicos de HTML(etiquetas y atributos, html5), de CSS(box model, flexbox, responsive) y JavaScript (tipos y estructuras de datos, condicionales, loops, ES6, Asincronía). Introducción a las tecnologías del stack MERN. Creación de un proyecto final aplicando todo lo aprendido.",
+      "descripcion": "Conceptos básicos de HTML(etiquetas y atributos, html5), de CSS(box model, flexbox, responsive) y JavaScript(tipos y estructuras de datos, condicionales, loops, ES6, Asincronía). Introducción a las tecnologías del stack MERN. Creación de un proyecto final aplicando todo lo aprendido.",
       "tecnologias": [
         {
           "id": 1,
@@ -91,7 +91,7 @@
       "institucion": "victor robles",
       "fechaInicio": "mar 2022",
       "fechaFin": "abr 2022",
-      "descripcion": "Curso de introducción a react en la plataforma Udemy, donde aprendí lo básico de la librería, como su instalación, qué es jsx, qué son los componentes, y la estructura básica de un proyecto en React.",
+      "descripcion": "Curso de introducción a react en la plataforma Udemy, donde aprendí lo básico de la librería como, su instalación, qué es jsx, qué son los componentes, y la estructura básica de un proyecto en React.",
       "tecnologias": [
         {
           "id": 1,
@@ -105,7 +105,7 @@
       "institucion": "bob ziroll",
       "fechaInicio": " mar 2022",
       "fechaFin": "abr 2022",
-      "descripcion": "Curso de React en la plataforma Scrimba, donde continué el aprendizaje de la librería, aprendiendo sobre hooks, props, formularios y llamadas de API en React.",
+      "descripcion": "Curso de React en la plataforma Scrimba, donde profundicé el conocimiento sobre la librería, aprendiendo sobre hooks, props, formularios y llamadas de API en React.",
       "tecnologias": [
         {
           "id": 1,
