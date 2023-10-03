@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Section from "../../Section";
 
-const listadoTectnologias = [
+const listadoTecnologias = [
   {
     nombre: "react",
     icono: <Icon icon="akar-icons:react-fill" />,
@@ -140,9 +140,9 @@ const About = ({ setCurrentSection }) => {
       <Header titulo={"sobre mi"} />
       <Descripcion>
         <p ref={ref}>
-          ¡Hola! soy Diego, un desarrollador jr. viviendo en Mendoza, Arg. Tengo
-          formación y comprensión sólida de los conceptos fundamentales del
-          desarrollo web, como <span>HTML</span>, <span>CSS</span> y{" "}
+          ¡Hola! soy Diego, un desarrollador frontend viviendo en Mendoza, Arg.
+          Tengo formación y comprensión sólida de los conceptos fundamentales
+          del desarrollo web, como <span>HTML</span>, <span>CSS</span> y{" "}
           <span>JavaScript</span>. Además, tengo experiencia en el desarrollo de
           aplicaciones utilizando <span>React</span> y he desarrollado proyectos
           que involucran la construcción de componentes, la gestión del estado y
@@ -153,8 +153,8 @@ const About = ({ setCurrentSection }) => {
           últimamente:
         </p>
         <Tecnologias>
-          {listadoTectnologias.map((tecnologia) => (
-            <li>
+          {listadoTecnologias.map((tecnologia, index) => (
+            <li key={index}>
               <p>{tecnologia.nombre}</p>
               {tecnologia.icono}
             </li>
