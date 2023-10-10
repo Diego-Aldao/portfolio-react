@@ -145,9 +145,8 @@ const Header = ({ setCurrentSection }) => {
         <Titulo>diego aldao</Titulo>
         <Titulo subtitulo>desarrollador frontend</Titulo>
         <Descripcion>
-          Desarrollador junior apasionado por el desarrollo web y, en
-          particular, por la construcción de interfaces de usuario interactivas
-          utilizando
+          Apasionado por el desarrollo web y, en particular, por la construcción
+          de interfaces de usuario interactivas utilizando
           <span>
             {" "}
             react

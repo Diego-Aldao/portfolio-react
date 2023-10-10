@@ -522,9 +522,9 @@
     },
     {
       "id": 15,
-      "titulo": "oddysey",
+      "titulo": "odyssey",
       "año": 2023,
-      "descripcion": "Oddysey es un sitio web que funciona como una comunidad y una base de datos dedicada al anime. Los usuarios pueden buscar, revisar y hacer un seguimiento de sus animes favoritos, como también encontrar información detallada sobre personajes y actores de doblaje.",
+      "descripcion": "odyssey es un sitio web que funciona como una comunidad y una base de datos dedicada al anime. Los usuarios pueden buscar, revisar y hacer un seguimiento de sus animes favoritos, como también encontrar información detallada sobre personajes y actores de doblaje.",
       "tipo": "sitio dase de datos",
       "imagenEnd": false,
       "principal": true,
