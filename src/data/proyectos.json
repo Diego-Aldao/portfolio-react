@@ -2,7 +2,7 @@
   "id": 1,
   "nombreArchivo": "todos mis proyectos",
   "nombre": "proyectos",
-  "descripcion": "En esta sección compartiré los últimos proyectos que he realizado, incluyendo, para cada uno de ellos, una breve descripción, las tecnologías utilizadas y los links hacia el código y los sitios en vivo",
+  "descripcion": "Los últimos proyectos que he realizado. Incluyo, para cada uno de ellos, una breve descripción, las tecnologías utilizadas y los links hacia el código y los sitios en vivo",
   "data": [
     {
       "id": 1,
@@ -524,7 +524,7 @@
       "id": 15,
       "titulo": "odyssey",
       "año": 2023,
-      "descripcion": "odyssey es un sitio web que funciona como una comunidad y una base de datos dedicada al anime. Los usuarios pueden buscar, revisar y hacer un seguimiento de sus animes favoritos, como también encontrar información detallada sobre personajes y actores de doblaje.",
+      "descripcion": "permite buscar, hacer un seguimiento según categorías y consultar información detallada de animes. También contiene información de personajes y personas relacionadas a la industria.",
       "tipo": "sitio dase de datos",
       "imagenEnd": false,
       "principal": true,
@@ -552,11 +552,11 @@
         },
         {
           "id": 3,
-          "nombre": "framer motion"
+          "nombre": "tailwind"
         },
         {
           "id": 4,
-          "nombre": "tailwind"
+          "nombre": "framer motion"
         }
       ]
     },
@@ -629,14 +629,14 @@
       "titulo": "akira",
       "principal": true,
       "año": 2023,
-      "descripcion": "Akira es un sitio web ecommerce que, a traves de llamadas a una api, permite la visualización de productos y la interacción con los mismos. Contiene búsqueda, filtro y detalle de productos, login, carrito, etc.",
+      "descripcion": "Obtiene información sobre productos y categorías a través de llamadas a  API. Permite buscar, filtrar, y ver en detalle miles de productos. También es posible agregar dichos productos a favoritos o a un carrito de compras.",
       "tipo": "ecommerce",
       "imagenEnd": true,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fakira.webp?alt=media&token=8176ed5c-5ac1-4e2c-b719-e22160f846e9&_gl=1*16u9c7p*_ga*MTgzMzI3NDAwOC4xNjk1Mzk0MDI0*_ga_CW55HF8NVT*MTY5Njg3MjgzNS42LjAuMTY5Njg3MjgzNS42MC4wLjA.",
       "links": [
         {
           "id": 1,
-          "url": "https://akira-ecommerce.web.app/",
+          "url": "https://akira-ecommerce.vercel.app/",
           "codigo": false
         },
         {
@@ -673,7 +673,7 @@
       "titulo": "movieVerse",
       "principal": true,
       "año": 2023,
-      "descripcion": "movieVerse es un sitio web que ofrece una extensa base de datos de películas, programas de televisión y celebridades. Permite a los usuarios buscar dentro de esos 3 parametros, ver estrenos, tendencias, detalles y guardar o agregar a favoritos.",
+      "descripcion": "Base de datos de películas, programas de televisión y celebridades. Permite a los usuarios buscar dentro de esos 3 parametros, ver estrenos, tendencias y tops. También ver los detalles de un parámetro en concreto y guardarlo o agregarlo a favoritos.",
       "tipo": "sitio dase de datos",
       "imagenEnd": false,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fmovieverse.webp?alt=media&token=b2f2c73d-290b-4622-ac69-03ef329ee00c",
@@ -714,7 +714,7 @@
       "titulo": "echo",
       "principal": true,
       "año": 2022,
-      "descripcion": "echo es un template para una empresa de diseño interior que necesite un sitio web que permita compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
+      "descripcion": "template para una empresa de diseño interior. Permite compartir su trabajo de una forma fácil, eficaz y atractiva. Contiene un formulario de contacto, blog y galerías.",
       "tipo": "sitio de negocio",
       "imagenEnd": true,
       "imagenUrl": "https://firebasestorage.googleapis.com/v0/b/portfolio-ap-front.appspot.com/o/proyectos%2Fecho.webp?alt=media&token=4ea8a1ce-e5b9-4cc0-8b53-e855ccadc8b8&_gl=1*1rq96gi*_ga*MTgzMzI3NDAwOC4xNjk1Mzk0MDI0*_ga_CW55HF8NVT*MTY5NjI3MzQyOC4yLjEuMTY5NjI3MzcwNi4xMi4wLjA.",
