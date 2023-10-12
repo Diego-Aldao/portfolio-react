@@ -1,7 +1,7 @@
 {
   "id": 1,
   "nombre": "cursos",
-  "descripcion": "En mi camino de aprendizaje, he completado varios cursos en línea y presenciales que me han ayudado a adquirir nuevos conocimientos y habilidades en tecnologías relacionadas con el desarrollo web.",
+  "descripcion": "Cursos en línea y presenciales que me han ayudado a adquirir nuevos conocimientos y habilidades en tecnologías relacionadas con el desarrollo web.",
   "cursos": [
     {
       "id": 1,
