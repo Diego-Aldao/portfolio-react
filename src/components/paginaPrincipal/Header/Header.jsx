@@ -41,19 +41,6 @@ const MainHeader = styled.section`
   }
 `;
 
-const MiniTexto = styled.span`
-  color: var(--color-principal);
-  font-family: var(--fuente-mono);
-  transform: scale(1, 1.1);
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  display: block;
-  &::first-letter {
-    text-transform: capitalize;
-  }
-`;
-
 const Titulo = styled.h1`
   color: var(--color-fuente-principal);
   font-size: clamp(36px, 6vw, 68px);
@@ -80,7 +67,6 @@ const Descripcion = styled.p`
     color: var(--color-principal);
     display: inline-flex;
     align-items: center;
-    margin-left: 5px;
     svg {
       width: 25px;
     }
@@ -130,7 +116,7 @@ const ContenedorBotones = styled.div`
 
 const Header = ({ setCurrentSection }) => {
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -141,21 +127,19 @@ const Header = ({ setCurrentSection }) => {
     <MainHeader>
       <div className="destino" id="inicio"></div>
       <div className="info">
-        <MiniTexto ref={ref}>hola, mi nombre es</MiniTexto>
-        <Titulo>diego aldao</Titulo>
+        <Titulo ref={ref}>diego aldao</Titulo>
         <Titulo subtitulo>desarrollador frontend</Titulo>
         <Descripcion>
           Apasionado por el desarrollo web y, en particular, por la construcción
-          de interfaces de usuario interactivas utilizando
+          de interfaces de usuario interactivas utilizando{" "}
           <span>
-            {" "}
             react
             <Icon icon="akar-icons:react-fill" />
           </span>
           .
         </Descripcion>
         <ContenedorBotones>
-          <Link to="/DiegoAldao_CV.pdf" target="_blank" className="lleno">
+          <Link to="/DiegoAldaoCV.pdf" target="_blank" className="lleno">
             curriculum <Icon icon="ph:file-text-bold" />
           </Link>
           <Link to="mailto:diegofrontdev@gmail.com">
