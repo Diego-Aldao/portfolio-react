@@ -8,6 +8,7 @@ const Contenedor = styled.section`
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
   p {
     span {
       color: var(--color-principal);
@@ -66,9 +67,17 @@ const Titulo = styled.h2`
   text-align: center;
   margin-bottom: 20px;
 `;
+const Trigger = styled.div`
+  position: absolute;
+  width: 50px;
+  height: 10%;
+  z-index: -10;
+  bottom: 0;
+  left: 50%;
+`;
 
 const Contacto = ({ setCurrentSection }) => {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
@@ -77,10 +86,11 @@ const Contacto = ({ setCurrentSection }) => {
   }, [inView]);
   return (
     <Contenedor id="contacto">
-      <Header ref={ref}>
+      <Header>
         <h2>contacto</h2>
       </Header>
       <Titulo>trabajemos juntos</Titulo>
+      <Trigger ref={ref}></Trigger>
       <p>
         Actualmente estoy buscando oportunidades para <span>aprender</span>,{" "}
         <span>crecer</span> como profesional y <span>aportar</span> el máximo

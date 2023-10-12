@@ -124,6 +124,14 @@ const Tecnologias = styled.ul`
     }
   }
 `;
+const Trigger = styled.div`
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: -10;
+  top: 0%;
+  left: 50%;
+`;
 
 const About = ({ setCurrentSection }) => {
   const { ref, inView } = useInView({
@@ -136,21 +144,20 @@ const About = ({ setCurrentSection }) => {
 
   return (
     <Section id="about">
-      <div className="destino"></div>
+      <Trigger ref={ref}></Trigger>
       <Header titulo={"sobre mi"} />
       <Descripcion>
-        <p ref={ref}>
-          ¡Hola! soy Diego, un desarrollador frontend viviendo en Mendoza, Arg.
-          Tengo formación y comprensión sólida de los conceptos fundamentales
-          del desarrollo web, como <span>HTML</span>, <span>CSS</span> y{" "}
-          <span>JavaScript</span>. Además, tengo experiencia en el desarrollo de
-          aplicaciones utilizando <span>React</span> y he desarrollado proyectos
-          que involucran la construcción de componentes, la gestión del estado y
-          la integración de <span>APIs</span>
+        <p>
+          Desarrollador frontend viviendo en Mendoza, Arg. con formación y
+          comprensión sólida de los conceptos fundamentales del desarrollo web,
+          como <span>HTML</span>, <span>CSS</span> y <span>JavaScript</span>.
+          Cuento con experiencia en el desarrollo de aplicaciones utilizando{" "}
+          <span>React</span> y he desarrollado proyectos que involucran la
+          construcción de componentes, la gestión del estado y la integración de{" "}
+          <span>APIs</span>.
         </p>
         <p>
-          Estas son las tecnologías y herramientas con las que he trabajado
-          últimamente:
+          Las tecnologías y herramientas con las que he trabajado últimamente:
         </p>
         <Tecnologias>
           {listadoTecnologias.map((tecnologia, index) => (

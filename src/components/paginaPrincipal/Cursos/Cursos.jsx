@@ -83,9 +83,18 @@ const Boton = styled.button`
   }
 `;
 
+const Trigger = styled.div`
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: -10;
+  top: 55%;
+  left: 50%;
+`;
+
 const Cursos = ({ setCurrentSection }) => {
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.9,
   });
   const [listaCursos, setListaCursos] = useState(cursos);
   const [currentCurso, setCurrentCurso] = useState({});
@@ -126,7 +135,7 @@ const Cursos = ({ setCurrentSection }) => {
   return (
     <Section id={"cursos"}>
       <Header titulo={cursos.nombre} descripcion={cursos.descripcion} />
-      <Contenido ref={ref}>
+      <Contenido>
         <Lista>
           {listaCursos.cursos.map((curso) => {
             return (
@@ -142,6 +151,7 @@ const Cursos = ({ setCurrentSection }) => {
         </Lista>
         {currentCurso.id && <ItemCurso curso={currentCurso} style={springs} />}
       </Contenido>
+      <Trigger ref={ref}></Trigger>
     </Section>
   );
 };
