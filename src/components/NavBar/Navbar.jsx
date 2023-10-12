@@ -76,9 +76,9 @@ const Navbar = ({ currentSection }) => {
         </Logo>
         <NavLinks currentSection={currentSection}>
           <LinkNavbar currentSection={currentSection} clase={"inicio"} />
+          <LinkNavbar currentSection={currentSection} clase={"proyectos"} />
           <LinkNavbar currentSection={currentSection} clase={"about"} />
           <LinkNavbar currentSection={currentSection} clase={"cursos"} />
-          <LinkNavbar currentSection={currentSection} clase={"proyectos"} />
           <LinkNavbar currentSection={currentSection} clase={"contacto"} />
           <ModoOscuro />
         </NavLinks>

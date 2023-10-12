@@ -12,16 +12,16 @@ const PaginaIndex = () => {
   const [currentSection, setCurrentSection] = useState("");
 
   useEffect(() => {
-    document.title = "Diego Aldao | Desarrollador Frontend";
+    document.title = "Diego Aldao — Desarrollador Frontend";
   }, []);
 
   return (
     <Layout currentSection={currentSection}>
       <Header setCurrentSection={setCurrentSection} />
-      <About setCurrentSection={setCurrentSection} />
-      <Cursos setCurrentSection={setCurrentSection} />
       <Proyectos setCurrentSection={setCurrentSection} />
       <Archivo setCurrentSection={setCurrentSection} />
+      <About setCurrentSection={setCurrentSection} />
+      <Cursos setCurrentSection={setCurrentSection} />
       <Contacto setCurrentSection={setCurrentSection} />
       <NavBarMobile currentSection={currentSection} />
     </Layout>

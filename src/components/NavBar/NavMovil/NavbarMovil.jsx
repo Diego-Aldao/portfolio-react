@@ -32,6 +32,11 @@ const NavBarMobile = ({ currentSection }) => {
       />
       <ItemNavMovil
         currentSection={currentSection}
+        clase={"proyectos"}
+        icono={<Icon icon="ph:folder-simple" />}
+      />
+      <ItemNavMovil
+        currentSection={currentSection}
         clase={"about"}
         icono={<Icon icon="ph:user-circle" />}
       />
@@ -39,12 +44,6 @@ const NavBarMobile = ({ currentSection }) => {
         currentSection={currentSection}
         clase={"cursos"}
         icono={<Icon icon="ph:graduation-cap" />}
-      />
-
-      <ItemNavMovil
-        currentSection={currentSection}
-        clase={"proyectos"}
-        icono={<Icon icon="ph:folder-simple" />}
       />
       <ItemNavMovil
         currentSection={currentSection}
