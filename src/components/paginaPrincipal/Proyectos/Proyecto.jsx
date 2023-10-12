@@ -136,9 +136,11 @@ const ListaTecnologias = styled.ul`
   }
   @media (min-width: 768px) {
     margin-left: ${({ imagen }) => (imagen ? "0" : "auto")};
-
     max-width: 60%;
     justify-content: ${({ imagen }) => (imagen ? "flex-start" : "flex-end")};
+  }
+  @media (min-width: 1024px) {
+    max-width: 320px;
   }
 `;
 
