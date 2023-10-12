@@ -8,7 +8,7 @@ import Proyects from "../../../data/proyectos.json";
 const Proyectos = ({ setCurrentSection }) => {
   const [proyectosPrincipales, setProyectosPrincipales] = useState();
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   useEffect(() => {
